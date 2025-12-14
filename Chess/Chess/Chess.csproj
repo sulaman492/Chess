@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <Folder Include="ChessAI\" />
   </ItemGroup>
 
 </Project>

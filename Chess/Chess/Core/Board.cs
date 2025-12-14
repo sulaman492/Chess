@@ -54,11 +54,11 @@ namespace Chess.Core
             }
 
         }
-        public bool isEmpty(Position pos)
+        public bool IsEmpty(Position pos)
         {
             return this[pos] == null;
         }
-        public static bool isInside(Position pos)
+        public static bool IsInside(Position pos)
         {
             return pos.Row>=0 && pos.Row<8 && pos.Column>=0 && pos.Column<8;
         }

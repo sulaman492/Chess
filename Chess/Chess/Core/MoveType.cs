@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Chess.Core
 {
-    class MoveType
+    public enum MoveType
     {
+        Normal,
+        castlingKS,
+        castlingQS,
+        DoublePawn,
+        EnPassant,
+        PawnPromotion
     }
 }

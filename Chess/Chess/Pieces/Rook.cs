@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chess.Core;
+using Chess.Moves;
 
 namespace Chess.Pieces
 {
@@ -11,6 +12,13 @@ namespace Chess.Pieces
     {
         public override PieceType Type => PieceType.Rook;
         public override Player Color { get; }
+        private Direction[] dirs = new Direction[]
+        {
+            Direction.North,
+            Direction.South,
+            Direction.East,
+            Direction.West,
+        };
         public Rook(Player color)
         {
             Color = color;
@@ -20,6 +28,10 @@ namespace Chess.Pieces
             Rook copy = new Rook(Color);
             copy.HasMoved = HasMoved;
             return copy;
+        }
+        public override IEnumerable<Move>GetMoves(Position from, Board board)
+        {
+            return MovePositionInDirs(from, board,dirs).Select(to=>new NormalMove(from,to));
         }
     }
 }
