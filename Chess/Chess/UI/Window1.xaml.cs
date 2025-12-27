@@ -96,6 +96,7 @@ namespace Chess.UI
             }
         }
 
+
         //private void BoardGrid_MouseDown(object sender, MouseButtonEventArgs e)
         //{
         //    try
@@ -210,7 +211,7 @@ namespace Chess.UI
         }
         private async void MakeAIMove()
         {
-            int depth = 4;
+            int depth = 3;
 
             Tree root = await Task.Run(() => Minimax.BuildGameTree(gameState.board, aiPlayer, depth, true));
             Move aiMove = Minimax.FindBestMove(root, aiPlayer);
@@ -220,6 +221,18 @@ namespace Chess.UI
                 gameState.MakeMove(aiMove);
                 DrawBoard(gameState.board);
             }
+        }
+        // Inside Window1.xaml.cs
+        private void UndoButton_Click(object sender, RoutedEventArgs e)
+        {
+             gameState.UndoMove();  // Make sure you have implemented this
+            DrawBoard(gameState.board);
+        }
+
+        private void RedoButton_Click(object sender, RoutedEventArgs e)
+        {
+            gameState.RedoMove();  // Make sure you have implemented this
+            DrawBoard(gameState.board);
         }
 
 

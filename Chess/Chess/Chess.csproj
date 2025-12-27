@@ -16,6 +16,8 @@
     <None Remove="UI\Assets\black-queen.png" />
     <None Remove="UI\Assets\black-rook.png" />
     <None Remove="UI\Assets\Board.png" />
+    <None Remove="UI\Assets\redo.png" />
+    <None Remove="UI\Assets\undo.png" />
     <None Remove="UI\Assets\white-bishop.png" />
     <None Remove="UI\Assets\white-king.png" />
     <None Remove="UI\Assets\white-knight.png" />
@@ -32,6 +34,10 @@
     <Resource Include="UI\Assets\black-queen.png" />
     <Resource Include="UI\Assets\black-rook.png" />
     <Resource Include="UI\Assets\Board.png" />
+    <Resource Include="UI\Assets\redo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="UI\Assets\undo.png" />
     <Resource Include="UI\Assets\white-bishop.png" />
     <Resource Include="UI\Assets\white-king.png" />
     <Resource Include="UI\Assets\white-knight.png" />
