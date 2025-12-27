@@ -14,11 +14,14 @@ namespace Chess.Pieces
 
         public override Player Color { get; }
         public Direction forward;
+        public override int Score { get; }
         public Pawn(Player color)
         {
+            Score = 10;
             Color = color;
             if (color == Player.White) forward = Direction.North;
             else forward = Direction.South;
+
         }
         public override Piece Copy()
         {
@@ -53,7 +56,12 @@ namespace Chess.Pieces
         {
             foreach (Direction dir in new Direction[] { Direction.East, Direction.West }) 
             {
+
                 Position to= from + forward + dir;
+                if (!Board.IsInside(to))
+                {
+                    continue; // Skip this direction
+                }
                 if (CanCapture(to, board))
                 {
                     yield return new NormalMove(from,to);
@@ -63,6 +71,14 @@ namespace Chess.Pieces
         public override IEnumerable<Move>GetMoves(Position from,Board board)
         {
             return ForwardMoves(from, board).Concat(DiagonalMoves(from,board));
+        }
+        public override bool CanCaptureOpponentKing(Position from, Board board)
+        {
+            return DiagonalMoves(from, board).Any(move =>
+            {
+                Piece piece = board[move.ToPos];
+                return piece!=null && piece.Type==PieceType.King;
+            });
         }
 
     }

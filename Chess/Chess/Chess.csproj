@@ -40,8 +40,4 @@
     <Resource Include="UI\Assets\white-rook.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ChessAI\" />
-  </ItemGroup>
-
 </Project>

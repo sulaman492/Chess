@@ -9,12 +9,12 @@ Chess
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\App.xaml
-2-540763434
 
-19-1520115242
+32096730882
+
+27-241828666
 198-211836927
-MainWindow.xaml;UI\Window1.xaml;
+MainWindow.xaml;UI\App.xaml;UI\Window1.xaml;
 
 False
 

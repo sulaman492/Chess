@@ -11,6 +11,8 @@ namespace Chess.Pieces
     public class Queen:Piece
     {
         public override PieceType Type=>PieceType.Queen;
+        
+        public override int Score { get; }
         public override Player Color { get; }
         private Direction[] dirs = new Direction[]
         {
@@ -25,6 +27,7 @@ namespace Chess.Pieces
         };
         public Queen(Player color)
         {
+            Score = 90;
             Color = color;
         }
         public override Piece Copy()

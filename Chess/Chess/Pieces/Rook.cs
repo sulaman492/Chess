@@ -11,6 +11,7 @@ namespace Chess.Pieces
     class Rook:Piece
     {
         public override PieceType Type => PieceType.Rook;
+        public override int Score { get; }
         public override Player Color { get; }
         private Direction[] dirs = new Direction[]
         {
@@ -21,6 +22,7 @@ namespace Chess.Pieces
         };
         public Rook(Player color)
         {
+            Score = 50;
             Color = color;
         }
         public override Piece Copy()

@@ -5,7 +5,6 @@ C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\bin\Debug\net8.0-wind
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\bin\Debug\net8.0-windows\Chess.pdb
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\Window1.g.cs
-C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\Chess_MarkupCompile.cache
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\Chess_MarkupCompile.lref
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\MainWindow.baml
@@ -20,3 +19,6 @@ C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-wind
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\Chess.pdb
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\Chess.genruntimeconfig.cache
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\ref\Chess.dll
+C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\Chess.sourcelink.json
+C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\App.g.cs
+C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\App.baml

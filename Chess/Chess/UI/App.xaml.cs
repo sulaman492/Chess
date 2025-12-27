@@ -1,22 +1,24 @@
-﻿using System.Configuration;
-using System.Data;
+﻿using Chess.UI;
 using System.Windows;
-using Chess.UI;
 
 namespace Chess
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
+        // Add this Main method
+        [STAThread]
+        public static void Main()
+        {
+            var app = new App();
+            app.InitializeComponent();
+            app.Run();
+        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
             var win = new Window1();
             win.Show();
         }
     }
-
 }

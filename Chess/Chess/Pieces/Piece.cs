@@ -12,6 +12,7 @@ namespace Chess.Pieces
     {
         public abstract PieceType Type { get; }
         public abstract Player Color { get; }
+        public virtual int Score { get; }
         public bool HasMoved { get;set; }=false;
 
         public abstract Piece Copy();
@@ -37,6 +38,14 @@ namespace Chess.Pieces
         protected IEnumerable<Position>MovePositionInDirs(Position from,Board board,Direction[] dirs)
         {
             return dirs.SelectMany(dir=>MovePositionInDir(from, board, dir));
+        }
+        public virtual bool CanCaptureOpponentKing(Position from,Board board)
+        { 
+            return GetMoves(from, board).Any(move =>
+            {
+                Piece piece = board[move.ToPos];
+                return piece!=null && piece.Type==PieceType.King;
+            });
         }
     }
 }

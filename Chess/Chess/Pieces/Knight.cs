@@ -12,8 +12,10 @@ namespace Chess.Pieces
     {
         public override PieceType Type => PieceType.Knight;
         public override Player Color { get; }
+        public override int Score { get; }
         public Knight(Player color)
         {
+            Score = 30;
             Color = color;
         }
         public override Piece Copy()
@@ -38,7 +40,7 @@ namespace Chess.Pieces
         {
             foreach(Position p in PotentialToPosition(from))
             {
-                if(board.IsEmpty(p) && (board.IsEmpty(p) || board[p].Color != Color))
+                if(Board.IsInside(p) && (board.IsEmpty(p) || board[p].Color != Color))
                 {
                     yield return p;
                 }

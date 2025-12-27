@@ -18,8 +18,10 @@ namespace Chess.Pieces
         };
         public override PieceType Type => PieceType.Bishop;
         public override Player Color { get; }
+        public override int Score{get;}
         public Bishop(Player color)
         {
+            Score = 30;
             Color = color;
         }
         public override Piece Copy()
