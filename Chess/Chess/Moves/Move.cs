@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chess.Core;
+using Chess.Pieces;
 
 namespace Chess.Moves
 {
@@ -16,10 +17,26 @@ namespace Chess.Moves
         
         public virtual bool IsLegal(Board board)
         {
-            Player player = board[FromPos].Color;
-            Board boardCopy = board.Copy();
-            Execute(boardCopy);
-            return !boardCopy.IsInCheck(player);
+            Piece movingPiece = board[FromPos];
+            Piece CapturedPiece = board[ToPos];
+            bool hasMovedBefore = movingPiece.HasMoved;
+
+            Player player = movingPiece.Color;
+
+            Execute(board);
+            bool legal = !board.IsInCheck(player);
+
+            board[FromPos] = movingPiece;
+            board[ToPos] = CapturedPiece;
+            movingPiece.HasMoved = hasMovedBefore;
+
+            return legal;
+
+
+            //Player player = board[FromPos].Color;
+            //Board boardCopy = board.Copy();
+            //Execute(boardCopy);
+            //return !boardCopy.IsInCheck(player);
         }
     }
 }

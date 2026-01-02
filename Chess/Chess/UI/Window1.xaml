@@ -28,11 +28,12 @@
         <!-- Right panel for Undo / Redo -->
         <Grid Grid.Column="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
-                <Button x:Name="UndoButton" Width="50" Height="50" Margin="5" Click="UndoButton_Click">
-                    <Image Source="Assets/undo.png" Stretch="Uniform"/>
+                <Button x:Name="UndoButton" Width="50" Height="50" Click="UndoButton_Click" Margin="5">
+                    <Image Source="/UI/Assets/undo.png" Stretch="Uniform"/>
                 </Button>
-                <Button x:Name="RedoButton" Width="50" Height="50" Margin="5" Click="RedoButton_Click">
-                    <Image Source="Assets/redo.png" Stretch="Uniform"/>
+
+                <Button x:Name="RedoButton" Width="50" Height="50" Click="RedoButton_Click" Margin="5">
+                    <Image Source="/UI/Assets/redo.png" Stretch="Uniform"/>
                 </Button>
             </StackPanel>
         </Grid>

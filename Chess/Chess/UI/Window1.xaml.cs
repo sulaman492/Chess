@@ -25,17 +25,23 @@ namespace Chess.UI
     /// </summary>
     public partial class Window1 : Window
     {
-        private bool isAI = true; // set true to enable AI, false for Human vs Human
+        private bool isAI ; // set true to enable AI, false for Human vs Human
         private Player aiPlayer = Player.Black; // AI plays Black
+        string Difficulty;
+        string Time;
 
         private readonly Image[,] pieceImage = new Image[8, 8];
         private readonly Rectangle[,] highlights= new Rectangle[8, 8];
         private readonly Dictionary<Position,Move> moveCache= new Dictionary<Position,Move>();
         private GameState gameState;
-
+        public int Depth;
         private Position selectedPos;
-        public Window1()
+        public Window1(bool Ai,string difficulty,string time,int depth)
         {
+            isAI = Ai;
+            Difficulty = difficulty;
+            Depth = depth;
+            //Time = time;
             InitializeComponent();
             InitializeBoard();
             gameState = new GameState(Board.Initial(), Player.White);
@@ -211,10 +217,9 @@ namespace Chess.UI
         }
         private async void MakeAIMove()
         {
-            int depth = 3;
-
-            Tree root = await Task.Run(() => Minimax.BuildGameTree(gameState.board, aiPlayer, depth, true));
-            Move aiMove = Minimax.FindBestMove(root, aiPlayer);
+            
+            Tree root = await Task.Run(() => Minimax.BuildGameTree(gameState.board, aiPlayer, Depth, true));
+            Move aiMove = Minimax.FindBestMove(root,aiPlayer);
 
             if (aiMove != null)
             {

@@ -13,6 +13,7 @@ namespace Chess.Core
     {
         public Board board { get; }
         public Player Currentplayer { get; set; }
+        public Result Result { get; set; }
 
         private stack undoStack=new stack();
         private stack redoStack=new stack();
@@ -21,6 +22,7 @@ namespace Chess.Core
         {
             this.board = board;
             this.Currentplayer = player;
+            Result = null;
         }
 
         public IEnumerable<Move> LegalMoveForPieces(Position pos) 
@@ -48,6 +50,7 @@ namespace Chess.Core
             redoStack=new stack();
 
             Currentplayer=Currentplayer.Opponent();
+            checkForGameOver();
         }
         public void UndoMove()
         {
@@ -72,6 +75,60 @@ namespace Chess.Core
 
             Currentplayer = Currentplayer.Opponent();
         }
+        public List<Move> AllLegalMovesFor(Player player)
+        {
+            List<Move>moves=new List<Move>();
+            foreach(Position pos in board.PiecePositionFor(player))
+            {
+                Piece piece = board[pos];
+                moves.AddRange(piece.GetMoves(pos, board));
+            }
+            return moves.Where(m=>m.IsLegal(board)).ToList();
+        }
+        private void checkForGameOver()
+        {
+            if(!AllLegalMovesFor(Currentplayer).Any())
+            {
+                if(board.IsInCheck(Currentplayer))
+                {
+                    Result = Result.Win(Currentplayer.Opponent());
+                }
+                else
+                {
+                    Result=Result.Draw(EndReason.stalemate);
+                }
+            }
+        }
+        public bool IsGameOver()
+        {
+            return Result != null;
+        }
+        // Minimal MakeMove for search
+        public void MakeMoveForSearch(Move move)
+        {
+            Piece movingPiece = board[move.FromPos];
+            Piece capturedPiece = board[move.ToPos];
+            bool hasMovedBefore = movingPiece.HasMoved;
+
+            board[move.ToPos] = movingPiece;
+            board[move.FromPos] = null;
+            movingPiece.HasMoved = true;
+
+            // Push minimal info for undo
+            undoStack.push(new MoveRecord(move, movingPiece, capturedPiece, hasMovedBefore));
+        }
+
+        // Minimal UndoMove for search
+        public void UndoMoveForSearch()
+        {
+            MoveRecord record = undoStack.pop();
+            if (record == null) return;
+
+            board[record.Move.FromPos] = record.MovingPiece;
+            board[record.Move.ToPos] = record.CapturedPiece;
+            record.MovingPiece.HasMoved = record.HasMovedBefore;
+        }
+
 
     }
 }
