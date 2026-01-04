@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chess.Moves;
-
-namespace Chess.DataStructures
+﻿public class Node<T>
 {
-    public class Node
-    {
-        public MoveRecord Data;
-        public Node Next;
+    public T Data { get; set; }
+    public Node<T> Next { get; set; }
 
-        public Node(MoveRecord data)
-        {
-            Data = data;
-            Next = null;
-        }
+    public Node<T> Previous { get; set; }
+    
+    public Node(T data)
+    {
+        Data = data;
+        Next = null;
     }
 }

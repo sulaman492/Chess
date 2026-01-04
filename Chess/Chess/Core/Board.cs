@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using Chess.Pieces;
+using Chess.Core;
 
 namespace Chess.Core
 {
@@ -27,8 +29,15 @@ namespace Chess.Core
             board.setAllPieces();
             return board;
         }
-        private void setAllPieces()
+        public void setAllPieces()
         {
+            for (int r = 0; r < 8; r++)
+            {
+                for (int c = 0; c < 8; c++)
+                {
+                    this[r, c] = null;
+                }
+            }
             this[0, 0] = new Rook(Player.Black);
             this[0, 1] = new Knight(Player.Black);
             this[0,2]=new Bishop(Player.Black);
@@ -94,5 +103,6 @@ namespace Chess.Core
             }
             return copy;
         }
+        
     }
 }

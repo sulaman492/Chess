@@ -15,7 +15,7 @@ namespace Chess.ChessAI
             Tree node = new Tree(board);
 
             // Leaf node or check condition
-            if (depth == 0 || board.IsInCheck(Player.White) || board.IsInCheck(Player.Black))
+            if (depth == 0 || GameState.IsTerminal(board, Player.White) || GameState.IsTerminal(board, Player.Black))
             {
                 node.Value = Evaluation.Evaluate(board, aiPlayer);
                 return node;

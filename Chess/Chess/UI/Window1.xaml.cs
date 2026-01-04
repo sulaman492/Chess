@@ -45,6 +45,20 @@ namespace Chess.UI
             InitializeComponent();
             InitializeBoard();
             gameState = new GameState(Board.Initial());
+            gameState.GameOver += winner =>
+            {
+                string message;
+                if (winner == Player.None)
+                    message = "Game Over: Draw/Stalemate!";
+                else
+                    message = $"Game Over: {winner} wins!";
+
+                // Show your GameOver window
+                GameOver gameOverWindow = new GameOver(message, this);
+                gameOverWindow.ShowDialog();
+            };
+
+
             DrawBoard(gameState.board);
         }
         private void InitializeBoard()
@@ -273,7 +287,55 @@ namespace Chess.UI
                 BlackCapturedPanel.Children.Add(img);
             }
         }
+        public void ResetToInitialForReplay()
+        {
+            gameState.ResetBoard();      // ← THIS is what you were missing
+            DrawBoard(gameState.board);
+            UpdateCapturedPiecesUI();
 
+            StartReplayMode();
+        }
+
+        public void StartReplayMode()
+        {
+
+            gameState.StartReplay();
+
+            DrawBoard(gameState.board);
+            UpdateCapturedPiecesUI();
+
+            BoardGrid.IsEnabled = false; // disable normal board interaction
+
+            // Hide normal play buttons
+            UndoButton.Visibility = Visibility.Collapsed;
+            RedoButton.Visibility = Visibility.Collapsed;
+
+            // Show replay buttons
+            Next.Visibility = Visibility.Visible;
+            Prev.Visibility = Visibility.Visible;
+
+            MessageBox.Show("Replay mode started. Use Next/Previous buttons to review moves.");
+
+            selectedPos = null;
+            HideHighlights();
+        }
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            if (gameState.NextMoveInReplay())
+            {
+                DrawBoard(gameState.board);
+                UpdateCapturedPiecesUI();
+            }
+        }
+
+        private void Prev_Click(object sender, RoutedEventArgs e)
+        {
+            if (gameState.PreviousMoveInReplay())
+            {
+                DrawBoard(gameState.board);
+                UpdateCapturedPiecesUI();
+            }
+        }
 
     }
 }

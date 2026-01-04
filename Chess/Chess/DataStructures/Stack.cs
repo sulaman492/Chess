@@ -1,35 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chess.Moves;
-
-namespace Chess.DataStructures
+﻿public class Stack<T>
 {
-    public class stack
+    private Node<T> head;
+
+    public void Push(T data)
     {
-        private Node head;
+        Node<T> newNode = new Node<T>(data);
+        newNode.Next = head;
+        head = newNode;
+    }
 
-        public void push(MoveRecord moveRecord)
-        {
-            Node newNode = new Node(moveRecord);
-            newNode.Next = head;
-            head = newNode;
-        }
+    public T Pop()
+    {
+        if (head == null)
+            throw new InvalidOperationException("Stack is empty"); // safer than returning null/default
 
-        public MoveRecord pop()
-        {
-            if (head == null) return null;
-            MoveRecord data = head.Data;
-            head = head.Next;
-            return data;
-        }
+        T data = head.Data;
+        head = head.Next;
+        return data;
+    }
 
-        public MoveRecord top()
-        {
-            return head?.Data;
-        }
+    public T Top()
+    {
+        if (head == null)
+            throw new InvalidOperationException("Stack is empty");
+
+        return head.Data;
+    }
+
+
+    public bool IsEmpty()
+    {
+        return head == null;
+    }
+    public void Clear()
+    {
+        head = null;    
     }
 
 }

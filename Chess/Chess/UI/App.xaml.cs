@@ -17,7 +17,7 @@ namespace Chess
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var win = new Window1(true, "easy", "ss",3);
+            var win = new Window1(false, "easy", "ss",3);
             win.Show();
         }
     }

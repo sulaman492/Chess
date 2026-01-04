@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chess.Moves;
+﻿using Chess.Moves;
 using Chess.Pieces;
 using Chess.DataStructures;
-
+using Chess.UI;
 
 namespace Chess.Core
 {
@@ -16,8 +11,14 @@ namespace Chess.Core
         public Player Currentplayer { get; set; }
         public Result Result { get; set; }
 
-        private stack undoStack=new stack();
-        private stack redoStack=new stack();
+        private Stack<MoveRecord> undoStack = new Stack<MoveRecord>();
+        private Stack<MoveRecord> redoStack = new Stack<MoveRecord>();
+        private Chess.DataStructures.LinkedList<MoveRecord> moveHistory
+       = new Chess.DataStructures.LinkedList<MoveRecord>();
+        private Node<MoveRecord> replayCurrent;
+
+        public event Action<Player> GameOver;
+
         Queue turnQueue;
         public List<Piece> CapturedWhitePieces { get; } = new List<Piece>();
         public List<Piece> CapturedBlackPieces { get; } = new List<Piece>();
@@ -26,7 +27,7 @@ namespace Chess.Core
             this.board = board;
             turnQueue = new Queue(Player.White, Player.Black);
             Currentplayer = turnQueue.NextTurn();
-
+            replayCurrent = null;
             Result = null;
         }
 
@@ -56,16 +57,18 @@ namespace Chess.Core
             move.Execute(board);
             
             MoveRecord record=new MoveRecord(move, movingPiece, CapturedPiece,HasMovedBefore);
-            undoStack.push(record);
+            moveHistory.AddLast(record);
+            undoStack.Push(record);
 
-            redoStack=new stack();
-
-            Currentplayer = turnQueue.NextTurn();
+            redoStack=new Stack<MoveRecord>();
+            
             checkForGameOver();
+            Currentplayer = turnQueue.NextTurn();
+
         }
         public void UndoMove()
         {
-            MoveRecord record=undoStack.pop();
+            MoveRecord record=undoStack.Pop();
             if (record == null) { return ; }
             board[record.Move.FromPos] = record.MovingPiece;
             board[record.Move.ToPos] = record.CapturedPiece;
@@ -79,12 +82,12 @@ namespace Chess.Core
                     CapturedBlackPieces.RemoveAt(CapturedBlackPieces.Count - 1);
             }
 
-            redoStack.push(record);
+            redoStack.Push(record);
             Currentplayer= Currentplayer.Opponent();
         }
         public void RedoMove()
         {
-            MoveRecord record = redoStack.pop();
+            MoveRecord record = redoStack.Pop();
             if (record == null) return;
             if (record.CapturedPiece != null)
             {
@@ -96,7 +99,7 @@ namespace Chess.Core
             record.Move.Execute(board);
             record.MovingPiece.HasMoved = true;
 
-            undoStack.push(record);
+            undoStack.Push(record);
 
             Currentplayer = Currentplayer.Opponent();
         }
@@ -112,18 +115,21 @@ namespace Chess.Core
         }
         private void checkForGameOver()
         {
-            if(!AllLegalMovesFor(Currentplayer).Any())
+            if (!AllLegalMovesFor(Currentplayer).Any())
             {
-                if(board.IsInCheck(Currentplayer))
+                if (board.IsInCheck(Currentplayer))
                 {
                     Result = Result.Win(Currentplayer.Opponent());
+                    GameOver?.Invoke(Currentplayer.Opponent()); 
                 }
                 else
                 {
-                    Result=Result.Draw(EndReason.stalemate);
+                    Result = Result.Draw(EndReason.stalemate);
+                    GameOver?.Invoke(Player.None); 
                 }
             }
         }
+
         public bool IsGameOver()
         {
             return Result != null;
@@ -140,20 +146,90 @@ namespace Chess.Core
             movingPiece.HasMoved = true;
 
             // Push minimal info for undo
-            undoStack.push(new MoveRecord(move, movingPiece, capturedPiece, hasMovedBefore));
+            undoStack.Push(new MoveRecord(move, movingPiece, capturedPiece, hasMovedBefore));
         }
 
         // Minimal UndoMove for search
         public void UndoMoveForSearch()
         {
-            MoveRecord record = undoStack.pop();
+            MoveRecord record = undoStack.Pop();
             if (record == null) return;
 
             board[record.Move.FromPos] = record.MovingPiece;
             board[record.Move.ToPos] = record.CapturedPiece;
             record.MovingPiece.HasMoved = record.HasMovedBefore;
         }
+        public void StartReplay()
+        {
+            ResetBoard();
+            replayCurrent = moveHistory.Head; 
+        }
 
+        public bool NextMoveInReplay()
+        {
+            if (replayCurrent == null) return false;
+
+            MoveRecord record = replayCurrent.Data;
+            record.Move.Execute(board);
+            record.MovingPiece.HasMoved = true;
+
+            if (record.CapturedPiece != null)
+            {
+                if (record.CapturedPiece.Color == Player.White)
+                    CapturedWhitePieces.Add(record.CapturedPiece);
+                else
+                    CapturedBlackPieces.Add(record.CapturedPiece);
+            }
+
+            replayCurrent = replayCurrent.Next;
+            return true;
+        }
+
+        public bool PreviousMoveInReplay()
+        {
+            // if replayCurrent is null, start from Tail (end of history)
+            Node<MoveRecord> prevNode = replayCurrent != null ? replayCurrent.Previous : moveHistory.Tail;
+            if (prevNode == null) return false;
+
+            MoveRecord record = prevNode.Data;
+
+            board[record.Move.FromPos] = record.MovingPiece;
+            board[record.Move.ToPos] = record.CapturedPiece;
+            record.MovingPiece.HasMoved = record.HasMovedBefore;
+
+            if (record.CapturedPiece != null)
+            {
+                if (record.CapturedPiece.Color == Player.White)
+                    CapturedWhitePieces.RemoveAt(CapturedWhitePieces.Count - 1);
+                else
+                    CapturedBlackPieces.RemoveAt(CapturedBlackPieces.Count - 1);
+            }
+
+            replayCurrent = prevNode;
+            return true;
+        }
+        public void ResetBoard()
+        {
+            board.setAllPieces(); // sets pieces at starting positions
+
+            CapturedWhitePieces.Clear();
+            CapturedBlackPieces.Clear();
+
+            undoStack.Clear();
+            redoStack.Clear();
+
+            turnQueue = new Queue(Player.White, Player.Black);
+            Currentplayer = turnQueue.NextTurn();
+
+            replayCurrent = moveHistory.Head;
+
+            Result = null;
+        }
+        public static bool IsTerminal(Board board, Player player)
+        {
+            return !board.PiecePositionFor(player).Any() ||
+                   !new GameState(board).AllLegalMovesFor(player).Any();
+        }
 
     }
 }

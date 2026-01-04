@@ -47,101 +47,108 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- ===== WHITE CAPTURED ===== -->
-            <GroupBox Grid.Row="0"
-                      Margin="6"
-                      BorderBrush="#333"
-                      BorderThickness="2"
-                      Background="#FAFAFA"
-                      Padding="6">
+            <!-- ===== WHITE DEAD PIECES ===== -->
+            <Border Grid.Row="0"
+                    Margin="6"
+                    Background="#E0E0E0"
+                    CornerRadius="8"
+                    Padding="10">
 
-                <GroupBox.Header>
-                    <TextBlock Text="♔ White Captured"
+                <StackPanel>
+                    <TextBlock Text="White Dead Pieces"
                                FontSize="16"
-                               FontWeight="Bold"
+                               FontWeight="SemiBold"
+                               Foreground="#222"
                                HorizontalAlignment="Center"
-                               Foreground="#111"/>
-                </GroupBox.Header>
-
-                <Border BorderBrush="#AAA"
-                        BorderThickness="1"
-                        CornerRadius="10"
-                        Padding="8"
-                        Background="White">
+                               Margin="0,4,0,10"/>
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <WrapPanel x:Name="WhiteCapturedPanel"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
+                                   HorizontalAlignment="Center"/>
                     </ScrollViewer>
+                </StackPanel>
+            </Border>
 
-                </Border>
-            </GroupBox>
+            <!-- ===== BLACK DEAD PIECES ===== -->
+            <Border Grid.Row="1"
+                    Margin="6"
+                    Background="#E0E0E0"
+                    CornerRadius="8"
+                    Padding="10">
 
-            <!-- ===== BLACK CAPTURED ===== -->
-            <GroupBox Grid.Row="1"
-                      Margin="6"
-                      BorderBrush="#333"
-                      BorderThickness="2"
-                      Background="#FAFAFA"
-                      Padding="6">
-
-                <GroupBox.Header>
-                    <TextBlock Text="♚ Black Captured"
+                <StackPanel>
+                    <TextBlock Text="Black Dead Pieces"
                                FontSize="16"
-                               FontWeight="Bold"
+                               FontWeight="SemiBold"
+                               Foreground="#222"
                                HorizontalAlignment="Center"
-                               Foreground="#111"/>
-                </GroupBox.Header>
-
-                <Border BorderBrush="#AAA"
-                        BorderThickness="1"
-                        CornerRadius="10"
-                        Padding="8"
-                        Background="White">
+                               Margin="0,4,0,10"/>
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <WrapPanel x:Name="BlackCapturedPanel"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
+                                   HorizontalAlignment="Center"/>
                     </ScrollViewer>
-
-                </Border>
-            </GroupBox>
+                </StackPanel>
+            </Border>
 
             <!-- ===== UNDO / REDO ===== -->
             <StackPanel Grid.Row="3"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10">
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            Margin="10">
 
+                <!-- Undo / Redo (normal mode) -->
                 <Button x:Name="UndoButton"
-                        Width="48"
-                        Height="48"
-                        Margin="6"
-                        Background="White"
-                        BorderBrush="#333"
-                        BorderThickness="2"
-                        Click="UndoButton_Click">
+            Width="48"
+            Height="48"
+            Margin="6"
+            Background="White"
+            BorderBrush="#333"
+            BorderThickness="2"
+            Click="UndoButton_Click">
 
-                    <Image Source="/UI/Assets/undo.png"
-                           Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/undo.png" Stretch="Uniform"/>
                 </Button>
 
                 <Button x:Name="RedoButton"
-                        Width="48"
-                        Height="48"
-                        Margin="6"
-                        Background="White"
-                        BorderBrush="#333"
-                        BorderThickness="2"
-                        Click="RedoButton_Click">
+            Width="48"
+            Height="48"
+            Margin="6"
+            Background="White"
+            BorderBrush="#333"
+            BorderThickness="2"
+            Click="RedoButton_Click">
 
-                    <Image Source="/UI/Assets/redo.png"
-                           Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/redo.png" Stretch="Uniform"/>
+                </Button>
+
+                <!-- Next / Prev (replay mode) -->
+                <Button x:Name="Prev"
+            Width="48"
+            Height="48"
+            Margin="6"
+            Background="White"
+            BorderBrush="#333"
+            BorderThickness="2"
+            Click="Prev_Click"
+            Visibility="Collapsed">
+                    <Image Source="/UI/Assets/prev.png" Stretch="Uniform"/>
+                </Button>
+
+                <Button x:Name="Next"
+            Width="48"
+            Height="48"
+            Margin="6"
+            Background="White"
+            BorderBrush="#333"
+            BorderThickness="2"
+            Click="Next_Click"
+            Visibility="Collapsed">
+                    <Image Source="/UI/Assets/next.png" Stretch="Uniform"/>
                 </Button>
 
             </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

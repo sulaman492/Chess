@@ -5,6 +5,9 @@
     <Compile Update="UI\ComputerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\GameOver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
