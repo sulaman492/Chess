@@ -7,6 +7,7 @@ using Chess.Moves;
 using Chess.Pieces;
 using Chess.DataStructures;
 
+
 namespace Chess.Core
 {
     public class GameState
@@ -17,11 +18,15 @@ namespace Chess.Core
 
         private stack undoStack=new stack();
         private stack redoStack=new stack();
-
-        public GameState(Board board, Player player)
+        Queue turnQueue;
+        public List<Piece> CapturedWhitePieces { get; } = new List<Piece>();
+        public List<Piece> CapturedBlackPieces { get; } = new List<Piece>();
+        public GameState(Board board)
         {
             this.board = board;
-            this.Currentplayer = player;
+            turnQueue = new Queue(Player.White, Player.Black);
+            Currentplayer = turnQueue.NextTurn();
+
             Result = null;
         }
 
@@ -41,7 +46,13 @@ namespace Chess.Core
             Piece CapturedPiece=board[move.ToPos];
             bool HasMovedBefore = movingPiece.HasMoved;
 
-
+            if (CapturedPiece != null)
+            {
+                if (CapturedPiece.Color == Player.White)
+                    CapturedWhitePieces.Add(CapturedPiece);
+                else
+                    CapturedBlackPieces.Add(CapturedPiece);
+            }
             move.Execute(board);
             
             MoveRecord record=new MoveRecord(move, movingPiece, CapturedPiece,HasMovedBefore);
@@ -49,7 +60,7 @@ namespace Chess.Core
 
             redoStack=new stack();
 
-            Currentplayer=Currentplayer.Opponent();
+            Currentplayer = turnQueue.NextTurn();
             checkForGameOver();
         }
         public void UndoMove()
@@ -60,6 +71,14 @@ namespace Chess.Core
             board[record.Move.ToPos] = record.CapturedPiece;
             record.MovingPiece.HasMoved=record.HasMovedBefore;
 
+            if (record.CapturedPiece != null)
+            {
+                if (record.CapturedPiece.Color == Player.White)
+                    CapturedWhitePieces.RemoveAt(CapturedWhitePieces.Count - 1);
+                else
+                    CapturedBlackPieces.RemoveAt(CapturedBlackPieces.Count - 1);
+            }
+
             redoStack.push(record);
             Currentplayer= Currentplayer.Opponent();
         }
@@ -67,7 +86,13 @@ namespace Chess.Core
         {
             MoveRecord record = redoStack.pop();
             if (record == null) return;
-
+            if (record.CapturedPiece != null)
+            {
+                if (record.CapturedPiece.Color == Player.White)
+                    CapturedWhitePieces.Add(record.CapturedPiece);
+                else
+                    CapturedBlackPieces.Add(record.CapturedPiece);
+            }
             record.Move.Execute(board);
             record.MovingPiece.HasMoved = true;
 

@@ -44,7 +44,7 @@ namespace Chess.UI
             //Time = time;
             InitializeComponent();
             InitializeBoard();
-            gameState = new GameState(Board.Initial(), Player.White);
+            gameState = new GameState(Board.Initial());
             DrawBoard(gameState.board);
         }
         private void InitializeBoard()
@@ -185,6 +185,7 @@ namespace Chess.UI
         {
             gameState.MakeMove(move);
             DrawBoard(gameState.board);
+            UpdateCapturedPiecesUI();
             if (isAI && gameState.Currentplayer == aiPlayer)
             {
                 // AI's turn
@@ -217,14 +218,16 @@ namespace Chess.UI
         }
         private async void MakeAIMove()
         {
-            
-            Tree root = await Task.Run(() => Minimax.BuildGameTree(gameState.board, aiPlayer, Depth, true));
-            Move aiMove = Minimax.FindBestMove(root,aiPlayer);
+
+            Move aiMove = await Task.Run(() =>
+        IterativeDeepeningAI.FindBestMove(gameState.board, aiPlayer, maxDepth: Depth, timeLimitMs: 7000)
+    );
 
             if (aiMove != null)
             {
                 gameState.MakeMove(aiMove);
                 DrawBoard(gameState.board);
+                UpdateCapturedPiecesUI();
             }
         }
         // Inside Window1.xaml.cs
@@ -232,12 +235,43 @@ namespace Chess.UI
         {
              gameState.UndoMove();  // Make sure you have implemented this
             DrawBoard(gameState.board);
+            UpdateCapturedPiecesUI();
         }
 
         private void RedoButton_Click(object sender, RoutedEventArgs e)
         {
             gameState.RedoMove();  // Make sure you have implemented this
             DrawBoard(gameState.board);
+            UpdateCapturedPiecesUI();
+        }
+        private void UpdateCapturedPiecesUI()
+        {
+            WhiteCapturedPanel.Children.Clear();
+            BlackCapturedPanel.Children.Clear();
+
+            foreach (Piece piece in gameState.CapturedWhitePieces)
+            {
+                Image img = new Image
+                {
+                    Source = Images.GetImage(piece),
+                    Width = 30,
+                    Height = 30,
+                    Margin = new Thickness(2)
+                };
+                WhiteCapturedPanel.Children.Add(img);
+            }
+
+            foreach (Piece piece in gameState.CapturedBlackPieces)
+            {
+                Image img = new Image
+                {
+                    Source = Images.GetImage(piece),
+                    Width = 30,
+                    Height = 30,
+                    Margin = new Thickness(2)
+                };
+                BlackCapturedPanel.Children.Add(img);
+            }
         }
 
 
