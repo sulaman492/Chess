@@ -27,6 +27,30 @@ namespace Chess.Pieces
             copy.HasMoved = HasMoved;
             return copy;
         }
+        private static bool IsUnMovedRook(Position pos,Board board)
+        {
+            if(board.IsEmpty(pos)) return false;
+            Piece piece = board[pos];
+            return piece.Type == PieceType.Rook && !piece.HasMoved;
+        }
+        private static bool ALlEmpty(IEnumerable<Position>positions,Board board)
+        {
+            return positions.All(pos => board.IsEmpty(pos));
+        }
+        private bool CanCastleKingSide(Position from,Board board)
+        {
+            if (HasMoved) return false;
+            Position rookPos = new Position(from.Row, 7);
+            Position[] betweenPos = new Position[] { new(from.Row, 5), new(from.Row, 6) };
+            return IsUnMovedRook(rookPos,board) && ALlEmpty(betweenPos, board); 
+        }
+        private bool CanCastleQueenSide(Position from,Board board)
+        {
+            if (HasMoved) return false;
+            Position rookPos = new Position(from.Row, 0);
+            Position[] betweenPos = new Position[] { new(from.Row, 1), new(from.Row, 2), new(from.Row, 3) };
+            return IsUnMovedRook(rookPos, board) && ALlEmpty(betweenPos, board);
+        }
         private IEnumerable<Position>MovePosition(Position from,Board board)
         {
             foreach (Direction dir in dirs) 
@@ -46,6 +70,14 @@ namespace Chess.Pieces
             {
                 yield return new NormalMove(from,to);
             }
+            if(CanCastleKingSide(from, board))
+            {
+                yield return new Castle(MoveType.castlingKS,from);
+            }
+            if (CanCastleQueenSide(from, board))
+            {
+                yield return new Castle(MoveType.castlingQS, from);
+            }
         }
         public override bool CanCaptureOpponentKing(Position from, Board board)
         {
@@ -55,5 +87,6 @@ namespace Chess.Pieces
                 return piece != null && piece.Type == PieceType.King;
             });
         }
+        
     }
 }

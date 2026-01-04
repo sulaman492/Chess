@@ -17,6 +17,7 @@ using Chess.Moves;
 using Chess.ChessAI;
 using Chess.ChessAI;
 using Chess.DataStructures;
+using System.Windows.Threading;
 
 namespace Chess.UI
 {
@@ -36,6 +37,12 @@ namespace Chess.UI
         private GameState gameState;
         public int Depth;
         private Position selectedPos;
+        private DispatcherTimer _timer;
+        private TimeSpan _whiteTime;
+        private TimeSpan _blackTime;
+        private bool _isTimedGame;
+        private Player _currentPlayer = Player.White;
+
         public Window1(bool Ai,string time,int depth)
         {
             isAI = Ai;
@@ -56,9 +63,8 @@ namespace Chess.UI
                 GameOver gameOverWindow = new GameOver(message, this);
                 gameOverWindow.ShowDialog();
             };
-
-
             DrawBoard(gameState.board);
+            InitializeTimeControl(time);
         }
         private void InitializeBoard()
         {
@@ -115,42 +121,6 @@ namespace Chess.UI
             }
         }
 
-
-        //private void BoardGrid_MouseDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Point point = e.GetPosition(BoardGrid);
-
-        //        // Debug with MessageBox to see coordinates
-        //        MessageBox.Show($"Click at: X={point.X}, Y={point.Y}\nBoard Size: {BoardGrid.ActualWidth}x{BoardGrid.ActualHeight}");
-
-        //        Position pos = ToSquarePosition(point);
-
-        //        // Check if position is valid
-        //        if (pos == null)
-        //        {
-        //            MessageBox.Show("Position is null - click was outside board");
-        //            return;
-        //        }
-
-        //        MessageBox.Show($"Converted to: Row={pos.Row}, Col={pos.Column}");
-
-        //        if (selectedPos == null)
-        //        {
-        //            OnFromPositionSelected(pos);
-        //        }
-        //        else
-        //        {
-        //            OnToPositionSelected(pos);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}");
-        //    }
-        //}
-
         private Position ToSquarePosition(Point point)
         {
             double squareSize = BoardGrid.ActualWidth / 8;
@@ -158,23 +128,6 @@ namespace Chess.UI
             int col = (int)(point.X / squareSize);
             return new Position(row, col);
         }
-        //private Position ToSquarePosition(Point point)
-        //{
-        //    double squareSize = BoardGrid.ActualWidth / 8;
-
-        //    // Calculate row and column using Math.Floor
-        //    int col = (int)Math.Floor(point.X / squareSize);
-        //    int row = (int)Math.Floor(point.Y / squareSize);
-
-        //    // Debug with MessageBox
-        //    MessageBox.Show($"Raw calc: row={row}, col={col} from X={point.X}, Y={point.Y}, squareSize={squareSize}");
-
-        //    // Clamp values to 0-7
-        //    col = Math.Clamp(col, 0, 7);
-        //    row = Math.Clamp(row, 0, 7);
-
-        //    return new Position(row, col);
-        //}
         private void OnFromPositionSelected(Position pos)
         {
             IEnumerable<Move> moves = gameState.LegalMoveForPieces(pos);
@@ -204,6 +157,7 @@ namespace Chess.UI
                 // AI's turn
                 MakeAIMove();
             }
+            _currentPlayer = gameState.Currentplayer;
         }
         private void CacheMoves(IEnumerable<Move> moves)
         {
@@ -335,6 +289,97 @@ namespace Chess.UI
                 UpdateCapturedPiecesUI();
             }
         }
+        private void InitializeTimeControl(string timeControl)
+        {
+            if (timeControl == "No Timer")
+            {
+                _isTimedGame = false;
+                WhiteTimerText.Visibility = Visibility.Collapsed;
+                BlackTimerText.Visibility = Visibility.Collapsed;
+                return;
+            }
 
+            _isTimedGame = true;
+
+            // Example: "5 Minutes" → 5
+            int minutes = int.Parse(timeControl.Split(' ')[0]);
+
+            _whiteTime = TimeSpan.FromMinutes(minutes);
+            _blackTime = TimeSpan.FromMinutes(minutes);
+
+            UpdateTimerUI();
+            StartTimer();
+        }
+        private void StartTimer()
+        {
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1);
+            _timer.Tick += Timer_Tick;
+            _timer.Start();
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            if (!_isTimedGame) return;
+
+            if (_currentPlayer == Player.White)
+            {
+                _whiteTime = _whiteTime.Subtract(TimeSpan.FromSeconds(1));
+                if (_whiteTime <= TimeSpan.Zero)
+                {
+                    EndGame(Player.Black, "White ran out of time!");
+                }
+            }
+            else
+            {
+                _blackTime = _blackTime.Subtract(TimeSpan.FromSeconds(1));
+                if (_blackTime <= TimeSpan.Zero)
+                {
+                    EndGame(Player.White, "Black ran out of time!");
+                }
+            }
+
+            UpdateTimerUI();
+        }
+        private void EndGame(Player winner, string reason)
+        {
+            // Stop the timer
+            _timer?.Stop();
+
+            // Disable board interaction
+            BoardGrid.IsEnabled = false;
+
+            // Hide buttons
+            UndoButton.Visibility = Visibility.Collapsed;
+            RedoButton.Visibility = Visibility.Collapsed;
+            Next.Visibility = Visibility.Collapsed;
+            Prev.Visibility = Visibility.Collapsed;
+
+            // Determine which player ran out of time
+            string message;
+            if (winner == Player.White)
+            {
+                message = "Black ran out of time! White wins!";
+            }
+            else if (winner == Player.Black)
+            {
+                message = "White ran out of time! Black wins!";
+            }
+            else
+            {
+                message = "Time ran out! Draw!";
+            }
+
+            // Show GameOver window
+            GameOver gameOverWindow = new GameOver(message, this);
+            gameOverWindow.ShowDialog();
+        }
+
+
+        private void UpdateTimerUI()
+        {
+            WhiteTimerText.Text = _whiteTime.ToString(@"mm\:ss");
+            BlackTimerText.Text = _blackTime.ToString(@"mm\:ss");
+        }
     }
 }
