@@ -9,23 +9,22 @@ namespace Chess.UI
             InitializeComponent();
         }
 
-        // 🧑‍🤝‍🧑 Multiplayer
         private void Multiplayer_Click(object sender, RoutedEventArgs e)
         {
-            //MultiplayerWindow multiplayerWindow = new MultiplayerWindow();
-            //multiplayerWindow.Show();
-            //this.Close();
+            MultiplayerWindow multiplayerWindow = new MultiplayerWindow();
+            multiplayerWindow.Show();
+
+            this.Close(); // optional (remove if you want menu to stay)
         }
 
-        // 🤖 Vs Computer
         private void Computer_Click(object sender, RoutedEventArgs e)
         {
             ComputerWindow computerWindow = new ComputerWindow();
             computerWindow.Show();
-            this.Close();
+
+            this.Close(); // optional
         }
 
-        // ❌ Exit
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

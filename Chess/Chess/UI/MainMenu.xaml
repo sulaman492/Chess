@@ -1,50 +1,74 @@
-﻿<Window x:Class="Chess.UI.MainMenu"
+﻿ <Window x:Class="Chess.UI.MainMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Chess" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
-        Background="#1E1E1E"
+        Background="#2B1810"
         ResizeMode="NoResize">
 
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#6D3D21"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="Height" Value="55"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="8" 
+                                BorderBrush="#E8C39E" 
+                                BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#8B4513"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+        <Grid.Background>
+            <RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.7" RadiusY="0.7">
+                <GradientStop Color="#4E342E" Offset="0"/>
+                <GradientStop Color="#2B1810" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
 
-            <!-- Title -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
+
             <TextBlock Text="CHESS"
-                       FontSize="48"
+                       FontSize="64"
+                       FontFamily="Georgia"
                        FontWeight="Bold"
-                       Foreground="White"
+                       Foreground="#E8C39E"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,40"/>
+                       Margin="0,0,0,40">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="4" Opacity="0.8"/>
+                </TextBlock.Effect>
+            </TextBlock>
 
-            <!-- Multiplayer -->
             <Button Content="Multiplayer"
-                    Height="55"
-                    FontSize="18"
-                    Margin="0,10"
-                    Background="#333333"
-                    Foreground="White"
-                    BorderBrush="White"
+                    Style="{StaticResource MenuButtonStyle}"
                     Click="Multiplayer_Click"/>
 
-            <!-- Vs Computer -->
             <Button Content="Computer"
-                    Height="55"
-                    FontSize="18"
-                    Margin="0,10"
-                    Background="#333333"
-                    Foreground="White"
-                    BorderBrush="White"
+                    Style="{StaticResource MenuButtonStyle}"
                     Click="Computer_Click"/>
 
-            <!-- Exit -->
             <Button Content="Exit"
-                    Height="55"
-                    FontSize="18"
-                    Margin="0,10"
-                    Background="#8B0000"
-                    Foreground="White"
-                    BorderBrush="White"
+                    Style="{StaticResource MenuButtonStyle}"
+                    Background="#4A2916"
                     Click="Exit_Click"/>
 
         </StackPanel>

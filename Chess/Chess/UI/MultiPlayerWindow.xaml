@@ -1,0 +1,88 @@
+﻿<Window x:Class="Chess.UI.MultiplayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Local Multiplayer" Height="600" Width="850"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#2B1810">
+
+    <Window.Resources>
+        <Style x:Key="WoodButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#6D3D21"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" 
+                                CornerRadius="6" BorderBrush="#4A2916" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#8B4513"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#6D3D21"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#3D2316" Offset="0"/>
+                <GradientStop Color="#1A0F0A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Border Width="500" Padding="35" Background="#E8C39E" 
+                CornerRadius="15" HorizontalAlignment="Center" 
+                VerticalAlignment="Center" BorderBrush="#6D3D21" BorderThickness="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="25" ShadowDepth="8" Opacity="0.5"/>
+            </Border.Effect>
+
+            <StackPanel>
+                <TextBlock Text="LOCAL MULTIPLAYER" FontSize="26" FontWeight="ExtraBold" 
+                           Foreground="#4A2916" HorizontalAlignment="Center" Margin="0,0,0,25"/>
+
+                <TextBlock Text="PLAYER 1 (WHITE)" Foreground="#6D3D21" FontWeight="Bold" FontSize="13"/>
+                <TextBox x:Name="Player1Name" Tag="Enter Name..." Text="Player 1"/>
+
+                <TextBlock Text="PLAYER 2 (BLACK)" Foreground="#6D3D21" FontWeight="Bold" FontSize="13"/>
+                <TextBox x:Name="Player2Name" Text="Player 2"/>
+
+                <TextBlock Text="TIME CONTROL" Foreground="#6D3D21" FontWeight="Bold" FontSize="13" Margin="0,5,0,5"/>
+                <ComboBox x:Name="MultiplayerTimeCombo" Height="38" SelectedIndex="1" Margin="0,0,0,30">
+                    <ComboBoxItem Content="No Timer"/>
+                    <ComboBoxItem Content="5 Minutes"/>
+                    <ComboBoxItem Content="10 Minutes"/>
+                    <ComboBoxItem Content="30 Minutes"/>
+                </ComboBox>
+
+                <UniformGrid Columns="2">
+                    <Button Content="BACK" Height="45" Margin="0,0,10,0" 
+                            Style="{StaticResource WoodButtonStyle}" 
+                            Background="#D2B48C" Foreground="#4A2916"
+                            Click="Back_Click"/>
+
+                    <Button Content="START GAME" Height="45" Margin="10,0,0,0" 
+                            Style="{StaticResource WoodButtonStyle}"
+                            Click="StartMultiplayer_Click"/>
+                </UniformGrid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

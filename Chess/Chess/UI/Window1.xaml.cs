@@ -36,10 +36,9 @@ namespace Chess.UI
         private GameState gameState;
         public int Depth;
         private Position selectedPos;
-        public Window1(bool Ai,string difficulty,string time,int depth)
+        public Window1(bool Ai,string time,int depth)
         {
             isAI = Ai;
-            Difficulty = difficulty;
             Depth = depth;
             //Time = time;
             InitializeComponent();

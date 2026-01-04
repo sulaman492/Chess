@@ -11,6 +11,9 @@
     <Compile Update="UI\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\MultiPlayerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

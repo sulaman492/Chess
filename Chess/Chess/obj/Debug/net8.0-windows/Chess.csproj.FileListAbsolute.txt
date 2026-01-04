@@ -28,3 +28,5 @@ C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-wind
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\MainMenu.g.cs
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\GameOver.g.cs
 C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\GameOver.baml
+C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\MultiPlayerWindow.baml
+C:\Users\User\Documents\All github Repos\Chess\Chess\Chess\obj\Debug\net8.0-windows\UI\MultiPlayerWindow.g.cs

@@ -35,7 +35,7 @@ namespace Chess.UI
 
             // Open actual game window
             int depth = GetDepthFromDifficulty(difficulty);
-            Window1 gameWindow = new Window1(Ai,difficulty, timeControl,depth);
+            Window1 gameWindow = new Window1(Ai,timeControl,depth);
             gameWindow.Show();
             this.Close();
         }
