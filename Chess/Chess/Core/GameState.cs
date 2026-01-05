@@ -10,6 +10,8 @@ namespace Chess.Core
         public Board board { get; }
         public Player Currentplayer { get; set; }
         public Result Result { get; set; }
+        public event Action MoveMade;
+
 
         private Stack<MoveRecord> undoStack = new Stack<MoveRecord>();
         private Stack<MoveRecord> redoStack = new Stack<MoveRecord>();
@@ -65,6 +67,7 @@ namespace Chess.Core
             checkForGameOver();
 
             Currentplayer = turnQueue.NextTurn();
+            MoveMade?.Invoke();
 
         }
 

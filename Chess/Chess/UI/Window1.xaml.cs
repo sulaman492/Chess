@@ -8,8 +8,11 @@
     using Chess.Moves;
     using Chess.ChessAI;
     using System.Windows.Threading;
+using System.IO;
+using System.Media;
 
-    namespace Chess.UI
+
+namespace Chess.UI
     {
         /// <summary>
         /// Interaction logic for Window1.xaml
@@ -41,9 +44,11 @@
                 InitializeComponent();
                 InitializeBoard();
                 gameState = new GameState(Board.Initial());
+            gameState.MoveMade += PlayMoveSound;
+
+
             gameState.GameOver += (winner, reason) =>
             {
-                // Must use Dispatcher because GameOver may be raised from a Task/AI thread
                 Dispatcher.Invoke(() =>
                 {
                     // Disable board interaction
@@ -108,7 +113,6 @@
                     return;
                 }
                 Position pos = ToSquarePosition(point);
-
                 if (selectedPos == null)
                 {
                     OnFromPositionSelected(pos);
@@ -150,7 +154,8 @@
                 gameState.MakeMove(move);
                 DrawBoard(gameState.board);
                 UpdateCapturedPiecesUI();
-                if (isAI && gameState.Currentplayer == aiPlayer)
+            
+            if (isAI && gameState.Currentplayer == aiPlayer)
                 {
                     // AI's turn
                     MakeAIMove();
@@ -193,7 +198,8 @@
                     gameState.MakeMove(aiMove);
                     DrawBoard(gameState.board);
                     UpdateCapturedPiecesUI();
-                }
+                    
+            }
             }
             // Inside Window1.xaml.cs
             private void UndoButton_Click(object sender, RoutedEventArgs e)
@@ -382,5 +388,36 @@
                 WhiteTimerText.Text = _whiteTime.ToString(@"mm\:ss");
                 BlackTimerText.Text = _blackTime.ToString(@"mm\:ss");
             }
+
+
+        private readonly MediaPlayer _movePlayer = new MediaPlayer();
+
+        private void PlayMoveSound()
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(
+       AppDomain.CurrentDomain.BaseDirectory,
+       "Sounds",
+       "Move.wav"
+   );
+
+                if (!File.Exists(path))
+                {
+                    MessageBox.Show($"Move.wav not found at:\n{path}");
+                    return;
+                }
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play(); // Plays asynchronously
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
+
+
+
+
     }
+}

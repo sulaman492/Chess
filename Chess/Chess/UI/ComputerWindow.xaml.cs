@@ -24,9 +24,9 @@ namespace Chess.UI
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            Player humanColor = WhiteRadio.IsChecked == true
-                ? Player.White
-                : Player.Black;
+            //Player humanColor = WhiteRadio.IsChecked == true
+            //    ? Player.White
+            //    : Player.Black;
 
             string difficulty = ((ComboBoxItem)DifficultyCombo.SelectedItem).Content.ToString();
             string timeControl = ((ComboBoxItem)TimeControlCombo.SelectedItem).Content.ToString();

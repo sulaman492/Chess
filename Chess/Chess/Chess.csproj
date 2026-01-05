@@ -28,6 +28,13 @@
     <None Remove="UI\Assets\white-pawn.png" />
     <None Remove="UI\Assets\white-queen.png" />
     <None Remove="UI\Assets\white-rook.png" />
+    <None Remove="UI\Sounds\Move.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UI\Sounds\Move.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

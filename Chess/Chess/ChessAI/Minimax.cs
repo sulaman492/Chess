@@ -15,14 +15,14 @@ namespace Chess.ChessAI
             Tree node = new Tree(board);
 
             // Leaf node or check condition
-            if (depth == 0 || GameState.IsTerminal(board, Player.White) || GameState.IsTerminal(board, Player.Black))
+            Player currentPlayer = isMaximizingPlayer ? aiPlayer : aiPlayer.Opponent();
+            if (depth == 0 || GameState.IsTerminal(board, currentPlayer))
             {
                 node.Value = Evaluation.Evaluate(board, aiPlayer);
                 return node;
             }
-
-            Player currentPlayer = isMaximizingPlayer ? aiPlayer : aiPlayer.Opponent();
-            IEnumerable<Move> moves = MoveGeneration.GenerateAllMoves(board, currentPlayer);
+            var moves = MoveGeneration.GenerateAllMoves(board, currentPlayer)
+    .OrderByDescending(m => ScoreMove(board, m));
 
             if (isMaximizingPlayer)
             {
