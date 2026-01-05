@@ -10,16 +10,44 @@ namespace Chess.UI
     {
         private readonly Window1 window1;
 
-        // <summary>
-        //// Constructor for GameOver window
+        /// <summary>
+        /// Constructor for GameOver window
         /// </summary>
-        /// <param name="message">Winner message: "White wins!", "Black wins!" or "Draw!"</param>
-        /// <param name="mainWindow">Reference to main window to reset or replay</param>
-        public GameOver(string message, Window1 window1)
+        /// <param name="winner">Player who won or Player.None for draw</param>
+        /// <param name="reason">End reason (checkmate, stalemate, timeout, etc.)</param>
+        /// <param name="window1">Reference to main window to reset or replay</param>
+        public GameOver(Player winner, EndReason reason, Window1 window1)
         {
             InitializeComponent();
+            this.window1 = window1;
+
+            string message = "";
+
+            if (winner == Player.None)
+            {
+                // Draw scenarios
+                message = reason switch
+                {
+                    EndReason.stalemate => "Draw by stalemate",
+                    EndReason.fiftyMoveRule => "Draw by fifty-move rule",
+                    EndReason.InsufficientMaterial => "Draw by insufficient material",
+                    EndReason.ThreeFoldRepitition => "Draw by threefold repetition",
+                    EndReason.TimeOut => "Draw by timeout", // <-- added timeout
+                    _ => "Draw"
+                };
+            }
+            else
+            {
+                // Win scenarios
+                message = reason switch
+                {
+                    EndReason.checkmate => $"{winner} wins by checkmate",
+                    EndReason.TimeOut => $"{winner} wins by timeout", // <-- added timeout
+                    _ => $"{winner} wins"
+                };
+            }
+
             WinnerText.Text = message;
-            this.window1= window1;
         }
 
         /// <summary>
@@ -35,10 +63,14 @@ namespace Chess.UI
         /// </summary>
         private void RestartButton_Click(object sender, RoutedEventArgs e)
         {
-//            mainWindow.ResetGame(); // call a method in MainWindow to reset board & GameState
+            // You should have a ResetGame method in Window1 to reset GameState and UI
+            // window1.ResetGame(); 
             this.Close();
         }
 
+        /// <summary>
+        /// Replay the game
+        /// </summary>
         private void ReplayButton_Click(object sender, RoutedEventArgs e)
         {
             window1.ResetToInitialForReplay();

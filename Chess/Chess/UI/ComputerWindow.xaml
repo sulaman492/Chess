@@ -37,25 +37,20 @@
                            HorizontalAlignment="Center"
                            Margin="0,0,0,25"/>
 
-                <TextBlock Text="Choose Color"
+                <TextBlock Text="Player Color"
                            Foreground="#6D3D21"
                            FontWeight="SemiBold"
                            FontSize="16"
                            Margin="0,10,0,5"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <RadioButton x:Name="WhiteRadio"
-                                 Content="White"
-                                 IsChecked="True"
-                                 Margin="10"
-                                 FontSize="15"
-                                 Foreground="#2B1810"/>
+                    <TextBlock Text="White"
+                            Foreground="#4A2916"
+FontWeight="SemiBold"
+FontSize="16"
+Margin="0,10,0,5"/>
 
-                    <RadioButton x:Name="BlackRadio"
-                                 Content="Black"
-                                 Margin="10"
-                                 FontSize="15"
-                                 Foreground="#2B1810"/>
+                    
                 </StackPanel>
 
                 <TextBlock Text="Time Control"

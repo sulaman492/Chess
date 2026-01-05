@@ -17,7 +17,7 @@ namespace Chess.Core
        = new Chess.DataStructures.LinkedList<MoveRecord>();
         private Node<MoveRecord> replayCurrent;
 
-        public event Action<Player> GameOver;
+        public event Action<Player, EndReason> GameOver;
 
         Queue turnQueue;
         public List<Piece> CapturedWhitePieces { get; } = new List<Piece>();
@@ -44,7 +44,7 @@ namespace Chess.Core
         public void MakeMove(Move move)
         {
             Piece movingPiece = board[move.FromPos];
-            Piece CapturedPiece=board[move.ToPos];
+            Piece CapturedPiece = board[move.ToPos];
             bool HasMovedBefore = movingPiece.HasMoved;
 
             if (CapturedPiece != null)
@@ -55,17 +55,19 @@ namespace Chess.Core
                     CapturedBlackPieces.Add(CapturedPiece);
             }
             move.Execute(board);
-            
-            MoveRecord record=new MoveRecord(move, movingPiece, CapturedPiece,HasMovedBefore);
+
+            MoveRecord record = new MoveRecord(move, movingPiece, CapturedPiece, HasMovedBefore);
             moveHistory.AddLast(record);
             undoStack.Push(record);
 
-            redoStack=new Stack<MoveRecord>();
-            
+            redoStack = new Stack<MoveRecord>();
+
             checkForGameOver();
+
             Currentplayer = turnQueue.NextTurn();
 
         }
+
         public void UndoMove()
         {
             MoveRecord record=undoStack.Pop();
@@ -120,15 +122,18 @@ namespace Chess.Core
                 if (board.IsInCheck(Currentplayer))
                 {
                     Result = Result.Win(Currentplayer.Opponent());
-                    GameOver?.Invoke(Currentplayer.Opponent()); 
+                    GameOver?.Invoke(Currentplayer.Opponent(), EndReason.checkmate);
                 }
                 else
                 {
                     Result = Result.Draw(EndReason.stalemate);
-                    GameOver?.Invoke(Player.None); 
+                    GameOver?.Invoke(Player.None, EndReason.stalemate);
                 }
             }
+
+            // TODO: later add other rules like fifty-move rule, threefold repetition, etc.
         }
+
 
         public bool IsGameOver()
         {
@@ -230,6 +235,9 @@ namespace Chess.Core
             return !board.PiecePositionFor(player).Any() ||
                    !new GameState(board).AllLegalMovesFor(player).Any();
         }
-
+        public void RaiseGameOver(Player winner, EndReason reason)
+        {
+            GameOver?.Invoke(winner, reason);
+        }
     }
 }
