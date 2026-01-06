@@ -12,6 +12,6 @@ namespace Chess.Core
         stalemate,
         fiftyMoveRule,
         InsufficientMaterial,
-        ThreeFoldRepitition,TimeOut
+        ThreeFoldRepetition,TimeOut
     }
 }

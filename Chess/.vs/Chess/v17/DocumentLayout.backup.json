@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\zobrist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\zobrist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\gameover.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\gameover.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\endreason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\endreason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\gamesound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\gamesound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\minimax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\minimax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\iterativedeepeningai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\iterativedeepeningai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,6 +53,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\normalmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\normalmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,20 +91,28 @@
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\piecetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\direction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\endreason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\endreason.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\minimax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\minimax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\iterativedeepeningai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\iterativedeepeningai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\knight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\datastructures\\priorityqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,18 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\mainmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\core\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\core\\movetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\datastructures\\stack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,16 +135,8 @@
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\computerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\gameover.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\gameover.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\gameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\gameover.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\castle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\bishop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -151,10 +171,6 @@
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\datastructures\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\moves\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\moves\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\ui\\images.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\ui\\images.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -163,20 +179,8 @@
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\datastructures\\queue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\queen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\datastructures\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\datastructures\\tree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\chessai\\movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\chessai\\movegeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\pieces\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62DC06B4-4570-4B21-9DE7-C6CBE08D0254}|Chess\\Chess.csproj|c:\\users\\user\\documents\\all github repos\\chess\\chess\\chess\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -206,136 +210,141 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Evaluation.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Evaluation.cs",
-              "RelativeDocumentMoniker": "Chess\\ChessAI\\Evaluation.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Evaluation.cs",
-              "RelativeToolTip": "Chess\\ChessAI\\Evaluation.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
+              "Title": "MoveGeneration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\MoveGeneration.cs",
+              "RelativeDocumentMoniker": "Chess\\ChessAI\\MoveGeneration.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\MoveGeneration.cs",
+              "RelativeToolTip": "Chess\\ChessAI\\MoveGeneration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T10:05:50.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T08:25:11.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Move.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\Move.cs",
-              "RelativeDocumentMoniker": "Chess\\Moves\\Move.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\Move.cs",
-              "RelativeToolTip": "Chess\\Moves\\Move.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:07:58.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Window1.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Window1.xaml.cs",
-              "RelativeDocumentMoniker": "Chess\\UI\\Window1.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Window1.xaml.cs",
-              "RelativeToolTip": "Chess\\UI\\Window1.xaml.cs",
-              "ViewState": "AgIAAIUBAAAAAAAAAAAAwJEBAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T17:29:27.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GameSound.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\GameSound.cs",
               "RelativeDocumentMoniker": "Chess\\Core\\GameSound.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\GameSound.cs",
               "RelativeToolTip": "Chess\\Core\\GameSound.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T16:34:23.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T16:34:23.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Chess\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Chess\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:05:54.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameState.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\GameState.cs",
               "RelativeDocumentMoniker": "Chess\\Core\\GameState.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\GameState.cs",
               "RelativeToolTip": "Chess\\Core\\GameState.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAApwEUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAAwB8BAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T07:03:43.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "King.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\King.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\King.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\King.cs",
-              "RelativeToolTip": "Chess\\Pieces\\King.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Zobrist.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Zobrist.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Zobrist.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Zobrist.cs",
+              "RelativeToolTip": "Chess\\Core\\Zobrist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:25:40.316Z",
+              "WhenOpened": "2026-01-05T21:04:40.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NormalMove.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\NormalMove.cs",
-              "RelativeDocumentMoniker": "Chess\\Moves\\NormalMove.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\NormalMove.cs",
-              "RelativeToolTip": "Chess\\Moves\\NormalMove.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Minimax.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Minimax.cs",
+              "RelativeDocumentMoniker": "Chess\\ChessAI\\Minimax.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Minimax.cs",
+              "RelativeToolTip": "Chess\\ChessAI\\Minimax.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:13:39.957Z",
+              "WhenOpened": "2025-12-27T10:19:21.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EndReason.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\EndReason.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\EndReason.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\EndReason.cs",
+              "RelativeToolTip": "Chess\\Core\\EndReason.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T06:38:32.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameOver.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml.cs",
+              "RelativeDocumentMoniker": "Chess\\UI\\GameOver.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml.cs",
+              "RelativeToolTip": "Chess\\UI\\GameOver.xaml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T10:30:46.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Knight.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Knight.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\Knight.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Knight.cs",
-              "RelativeToolTip": "Chess\\Pieces\\Knight.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Title": "IterativeDeepeningAI.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\IterativeDeepeningAI.cs",
+              "RelativeDocumentMoniker": "Chess\\ChessAI\\IterativeDeepeningAI.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\IterativeDeepeningAI.cs",
+              "RelativeToolTip": "Chess\\ChessAI\\IterativeDeepeningAI.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:25:07.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T09:27:22.642Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Pawn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Pawn.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\Pawn.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Pawn.cs",
-              "RelativeToolTip": "Chess\\Pieces\\Pawn.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Title": "Evaluation.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Evaluation.cs",
+              "RelativeDocumentMoniker": "Chess\\ChessAI\\Evaluation.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Evaluation.cs",
+              "RelativeToolTip": "Chess\\ChessAI\\Evaluation.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:24:52.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T10:05:50.418Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Rook.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Rook.cs",
+              "RelativeDocumentMoniker": "Chess\\Pieces\\Rook.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Rook.cs",
+              "RelativeToolTip": "Chess\\Pieces\\Rook.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:25:30.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Queen.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Queen.cs",
+              "RelativeDocumentMoniker": "Chess\\Pieces\\Queen.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Queen.cs",
+              "RelativeToolTip": "Chess\\Pieces\\Queen.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:25:49.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Piece.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Piece.cs",
               "RelativeDocumentMoniker": "Chess\\Pieces\\Piece.cs",
@@ -343,229 +352,47 @@
               "RelativeToolTip": "Chess\\Pieces\\Piece.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:19:07.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Position.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\Position.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Position.cs",
-              "RelativeToolTip": "Chess\\Core\\Position.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAqwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T12:35:33.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T13:19:07.411Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Player.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\Player.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Player.cs",
-              "RelativeToolTip": "Chess\\Core\\Player.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Title": "NormalMove.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\NormalMove.cs",
+              "RelativeDocumentMoniker": "Chess\\Moves\\NormalMove.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\NormalMove.cs",
+              "RelativeToolTip": "Chess\\Moves\\NormalMove.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T12:23:11.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T10:13:39.957Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "PieceType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\PieceType.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\PieceType.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\PieceType.cs",
-              "RelativeToolTip": "Chess\\Core\\PieceType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "MoveRecord.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\MoveRecord.cs",
+              "RelativeDocumentMoniker": "Chess\\Moves\\MoveRecord.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\MoveRecord.cs",
+              "RelativeToolTip": "Chess\\Moves\\MoveRecord.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:17:37.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T12:53:53.731Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Direction.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Direction.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\Direction.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Direction.cs",
-              "RelativeToolTip": "Chess\\Core\\Direction.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwCQAAAAAAAAAAAAAAA==",
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\Move.cs",
+              "RelativeDocumentMoniker": "Chess\\Moves\\Move.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\Move.cs",
+              "RelativeToolTip": "Chess\\Moves\\Move.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T12:56:56.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T10:07:58.825Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "EndReason.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\EndReason.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\EndReason.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\EndReason.cs",
-              "RelativeToolTip": "Chess\\Core\\EndReason.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T06:38:32.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Minimax.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Minimax.cs",
-              "RelativeDocumentMoniker": "Chess\\ChessAI\\Minimax.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\Minimax.cs",
-              "RelativeToolTip": "Chess\\ChessAI\\Minimax.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T10:19:21.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IterativeDeepeningAI.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\IterativeDeepeningAI.cs",
-              "RelativeDocumentMoniker": "Chess\\ChessAI\\IterativeDeepeningAI.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\IterativeDeepeningAI.cs",
-              "RelativeToolTip": "Chess\\ChessAI\\IterativeDeepeningAI.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T09:27:22.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Result.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\Result.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Result.cs",
-              "RelativeToolTip": "Chess\\Core\\Result.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:29:58.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PriorityQueue.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\PriorityQueue.cs",
-              "RelativeDocumentMoniker": "Chess\\DataStructures\\PriorityQueue.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\PriorityQueue.cs",
-              "RelativeToolTip": "Chess\\DataStructures\\PriorityQueue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T14:08:40.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Board.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Board.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\Board.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Board.cs",
-              "RelativeToolTip": "Chess\\Core\\Board.cs",
-              "ViewState": "AgIAAAAAAAAAZmZmZmbmvycAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T06:43:03.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MainMenu.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MainMenu.xaml.cs",
-              "RelativeDocumentMoniker": "Chess\\UI\\MainMenu.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MainMenu.xaml.cs",
-              "RelativeToolTip": "Chess\\UI\\MainMenu.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T10:12:12.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MoveType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\MoveType.cs",
-              "RelativeDocumentMoniker": "Chess\\Core\\MoveType.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\MoveType.cs",
-              "RelativeToolTip": "Chess\\Core\\MoveType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:05:36.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Stack.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Stack.cs",
-              "RelativeDocumentMoniker": "Chess\\DataStructures\\Stack.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Stack.cs",
-              "RelativeToolTip": "Chess\\DataStructures\\Stack.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T12:28:39.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ComputerWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Chess\\UI\\ComputerWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml.cs",
-              "RelativeToolTip": "Chess\\UI\\ComputerWindow.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-28T10:16:55.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ComputerWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml",
-              "RelativeDocumentMoniker": "Chess\\UI\\ComputerWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml",
-              "RelativeToolTip": "Chess\\UI\\ComputerWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-28T10:14:52.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GameOver.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml",
-              "RelativeDocumentMoniker": "Chess\\UI\\GameOver.xaml",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml",
-              "RelativeToolTip": "Chess\\UI\\GameOver.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-04T10:22:35.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "GameOver.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml.cs",
-              "RelativeDocumentMoniker": "Chess\\UI\\GameOver.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml.cs",
-              "RelativeToolTip": "Chess\\UI\\GameOver.xaml.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T10:30:46.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "Castle.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\Castle.cs",
               "RelativeDocumentMoniker": "Chess\\Moves\\Castle.cs",
@@ -577,7 +404,221 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Direction.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Direction.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Direction.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Direction.cs",
+              "RelativeToolTip": "Chess\\Core\\Direction.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T12:56:56.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Board.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Board.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Board.cs",
+              "RelativeToolTip": "Chess\\Core\\Board.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T06:43:03.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Result.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Result.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Result.cs",
+              "RelativeToolTip": "Chess\\Core\\Result.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA6wBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T14:29:58.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Position.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Position.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Position.cs",
+              "RelativeToolTip": "Chess\\Core\\Position.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T12:35:33.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Player.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\Player.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\Player.cs",
+              "RelativeToolTip": "Chess\\Core\\Player.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T12:23:11.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PieceType.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\PieceType.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\PieceType.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\PieceType.cs",
+              "RelativeToolTip": "Chess\\Core\\PieceType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:17:37.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MoveType.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\MoveType.cs",
+              "RelativeDocumentMoniker": "Chess\\Core\\MoveType.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Core\\MoveType.cs",
+              "RelativeToolTip": "Chess\\Core\\MoveType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:05:36.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "Chess\\UI\\Window1.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Window1.xaml.cs",
+              "RelativeToolTip": "Chess\\UI\\Window1.xaml.cs",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAAwKkBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:29:27.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Chess\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Chess\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:05:54.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "King.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\King.cs",
+              "RelativeDocumentMoniker": "Chess\\Pieces\\King.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\King.cs",
+              "RelativeToolTip": "Chess\\Pieces\\King.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:25:40.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Knight.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Knight.cs",
+              "RelativeDocumentMoniker": "Chess\\Pieces\\Knight.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Knight.cs",
+              "RelativeToolTip": "Chess\\Pieces\\Knight.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:25:07.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Pawn.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Pawn.cs",
+              "RelativeDocumentMoniker": "Chess\\Pieces\\Pawn.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Pawn.cs",
+              "RelativeToolTip": "Chess\\Pieces\\Pawn.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T13:24:52.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PriorityQueue.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\PriorityQueue.cs",
+              "RelativeDocumentMoniker": "Chess\\DataStructures\\PriorityQueue.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\PriorityQueue.cs",
+              "RelativeToolTip": "Chess\\DataStructures\\PriorityQueue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T14:08:40.502Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "MainMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MainMenu.xaml.cs",
+              "RelativeDocumentMoniker": "Chess\\UI\\MainMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MainMenu.xaml.cs",
+              "RelativeToolTip": "Chess\\UI\\MainMenu.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T10:12:12.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Stack.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Stack.cs",
+              "RelativeDocumentMoniker": "Chess\\DataStructures\\Stack.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Stack.cs",
+              "RelativeToolTip": "Chess\\DataStructures\\Stack.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T12:28:39.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ComputerWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Chess\\UI\\ComputerWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml.cs",
+              "RelativeToolTip": "Chess\\UI\\ComputerWindow.xaml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T10:16:55.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ComputerWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml",
+              "RelativeDocumentMoniker": "Chess\\UI\\ComputerWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\ComputerWindow.xaml",
+              "RelativeToolTip": "Chess\\UI\\ComputerWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-28T10:14:52.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GameOver.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml",
+              "RelativeDocumentMoniker": "Chess\\UI\\GameOver.xaml",
+              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\GameOver.xaml",
+              "RelativeToolTip": "Chess\\UI\\GameOver.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-04T10:22:35.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "Bishop.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Bishop.cs",
               "RelativeDocumentMoniker": "Chess\\Pieces\\Bishop.cs",
@@ -589,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "MultiPlayerWindow.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MultiPlayerWindow.xaml",
               "RelativeDocumentMoniker": "Chess\\UI\\MultiPlayerWindow.xaml",
@@ -600,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "Window1.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Window1.xaml",
               "RelativeDocumentMoniker": "Chess\\UI\\Window1.xaml",
@@ -611,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "MultiPlayerWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MultiPlayerWindow.xaml.cs",
               "RelativeDocumentMoniker": "Chess\\UI\\MultiPlayerWindow.xaml.cs",
@@ -623,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\App.xaml.cs",
               "RelativeDocumentMoniker": "Chess\\UI\\App.xaml.cs",
@@ -635,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "MainMenu.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\MainMenu.xaml",
               "RelativeDocumentMoniker": "Chess\\UI\\MainMenu.xaml",
@@ -646,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "LinkedList.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\LinkedList.cs",
               "RelativeDocumentMoniker": "Chess\\DataStructures\\LinkedList.cs",
@@ -658,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Node.cs",
               "RelativeDocumentMoniker": "Chess\\DataStructures\\Node.cs",
@@ -670,19 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "MoveRecord.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\MoveRecord.cs",
-              "RelativeDocumentMoniker": "Chess\\Moves\\MoveRecord.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Moves\\MoveRecord.cs",
-              "RelativeToolTip": "Chess\\Moves\\MoveRecord.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T12:53:53.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "Images.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\Images.cs",
               "RelativeDocumentMoniker": "Chess\\UI\\Images.cs",
@@ -694,19 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Queen.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Queen.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\Queen.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Queen.cs",
-              "RelativeToolTip": "Chess\\Pieces\\Queen.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:25:49.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "Queue.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Queue.cs",
               "RelativeDocumentMoniker": "Chess\\DataStructures\\Queue.cs",
@@ -718,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "Tree.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\DataStructures\\Tree.cs",
               "RelativeDocumentMoniker": "Chess\\DataStructures\\Tree.cs",
@@ -730,19 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MoveGeneration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\MoveGeneration.cs",
-              "RelativeDocumentMoniker": "Chess\\ChessAI\\MoveGeneration.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\ChessAI\\MoveGeneration.cs",
-              "RelativeToolTip": "Chess\\ChessAI\\MoveGeneration.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T08:25:11.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Chess\\MainWindow.xaml",
@@ -753,19 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Rook.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Rook.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\Rook.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Pieces\\Rook.cs",
-              "RelativeToolTip": "Chess\\Pieces\\Rook.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAowCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T13:25:30.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "Chess.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\Chess.csproj",
               "RelativeDocumentMoniker": "Chess\\Chess.csproj",
@@ -777,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\All github Repos\\Chess\\Chess\\Chess\\UI\\App.xaml",
               "RelativeDocumentMoniker": "Chess\\UI\\App.xaml",
@@ -788,7 +781,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\User\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",

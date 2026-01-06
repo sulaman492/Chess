@@ -2,6 +2,7 @@
 using Chess.Pieces;
 using Chess.DataStructures;
 using Chess.UI;
+using System.Text;
 
 namespace Chess.Core
 {
@@ -11,6 +12,7 @@ namespace Chess.Core
         public Player Currentplayer { get; set; }
         public Result Result { get; set; }
         public event Action MoveMade;
+        private Dictionary<string, int> positionCount = new Dictionary<string, int>();
 
 
         private Stack<MoveRecord> undoStack = new Stack<MoveRecord>();
@@ -57,6 +59,7 @@ namespace Chess.Core
                     CapturedBlackPieces.Add(CapturedPiece);
             }
             move.Execute(board);
+            UpdateRepetition();
 
             MoveRecord record = new MoveRecord(move, movingPiece, CapturedPiece, HasMovedBefore);
             moveHistory.AddLast(record);
@@ -242,5 +245,49 @@ namespace Chess.Core
         {
             GameOver?.Invoke(winner, reason);
         }
+        private string GetBoardHash()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int r = 0; r < 8; r++)
+            {
+                for (int c = 0; c < 8; c++)
+                {
+                    Piece piece = board[r, c];
+                    if (piece == null)
+                    {
+                        sb.Append(".");
+                    }
+                    else
+                    {
+                        char pieceChar = piece.Type.ToString()[0]; // P, R, N, B, Q, K
+                        char colorChar = piece.Color == Player.White ? 'W' : 'B';
+                        sb.Append(pieceChar).Append(colorChar);
+                    }
+                }
+            }
+
+            // Include which player's turn it is
+            sb.Append(Currentplayer == Player.White ? 'W' : 'B');
+
+            return sb.ToString();
+        }
+        private void UpdateRepetition()
+        {
+            string hash = GetBoardHash();
+
+            if (positionCount.ContainsKey(hash))
+                positionCount[hash]++;
+            else
+                positionCount[hash] = 1;
+
+            if (positionCount[hash] >= 3)
+            {
+                // Threefold repetition detected → Draw
+                Result = Result.Draw(EndReason.ThreeFoldRepetition);
+                GameOver?.Invoke(Player.None, EndReason.ThreeFoldRepetition);
+            }
+        }
+
     }
 }

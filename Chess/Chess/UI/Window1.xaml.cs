@@ -23,8 +23,10 @@ namespace Chess.UI
             private Player aiPlayer = Player.Black; // AI plays Black
             string Difficulty;
             string Time;
+        private SoundPlayer _moveSoundPlayer;
 
-            private readonly Image[,] pieceImage = new Image[8, 8];
+
+        private readonly Image[,] pieceImage = new Image[8, 8];
             private readonly Rectangle[,] highlights= new Rectangle[8, 8];
             private readonly Dictionary<Position,Move> moveCache= new Dictionary<Position,Move>();
             private GameState gameState;
@@ -45,6 +47,8 @@ namespace Chess.UI
                 InitializeBoard();
                 gameState = new GameState(Board.Initial());
             gameState.MoveMade += PlayMoveSound;
+            InitializeMoveSound();
+
 
 
             gameState.GameOver += (winner, reason) =>
@@ -392,23 +396,36 @@ namespace Chess.UI
 
         private readonly MediaPlayer _movePlayer = new MediaPlayer();
 
-        private void PlayMoveSound()
+        private void InitializeMoveSound()
         {
             try
             {
                 string path = System.IO.Path.Combine(
-       AppDomain.CurrentDomain.BaseDirectory,
-       "Sounds",
-       "Move.wav"
-   );
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "UI",
+                    "Sounds",
+                    "Move.wav"
+                );
 
                 if (!File.Exists(path))
                 {
                     MessageBox.Show($"Move.wav not found at:\n{path}");
                     return;
                 }
-                SoundPlayer player = new SoundPlayer(path);
-                player.Play(); // Plays asynchronously
+
+                _moveSoundPlayer = new SoundPlayer(path);
+                _moveSoundPlayer.Load(); // 🔥 preload into memory
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void PlayMoveSound()
+        {
+            try
+            {
+                _moveSoundPlayer?.Play(); // 🔥 instant
             }
             catch (Exception ex)
             {

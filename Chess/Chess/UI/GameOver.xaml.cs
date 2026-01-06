@@ -31,7 +31,7 @@ namespace Chess.UI
                     EndReason.stalemate => "Draw by stalemate",
                     EndReason.fiftyMoveRule => "Draw by fifty-move rule",
                     EndReason.InsufficientMaterial => "Draw by insufficient material",
-                    EndReason.ThreeFoldRepitition => "Draw by threefold repetition",
+                    EndReason.ThreeFoldRepetition => "Draw by threefold repetition",
                     EndReason.TimeOut => "Draw by timeout", // <-- added timeout
                     _ => "Draw"
                 };
