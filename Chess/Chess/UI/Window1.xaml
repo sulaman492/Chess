@@ -42,9 +42,9 @@
         <Grid Grid.Column="1" Margin="8">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <!-- Timers + Dead pieces -->
+                <!-- Timers + Dead pieces + Moves -->
                 <RowDefinition Height="*"/>
-                <!-- Undo / Redo / Replay buttons -->
+                <!-- Undo / Redo / Replay / Resign buttons -->
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
@@ -68,11 +68,11 @@
                 </StackPanel>
             </Grid>
 
-            <!-- ===== DEAD PIECES (Stacked Vertically, stretched, no rounded border) ===== -->
+            <!-- ===== DEAD PIECES AND MOVES LIST ===== -->
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0,0,0,0">
 
                 <!-- WHITE DEAD PIECES -->
-                <Border Background="#E0E0E0" CornerRadius="0" Margin="0,0,0,30" Padding="10">
+                <Border Background="#E0E0E0" CornerRadius="0" Padding="10" Margin="0,0,0,10">
                     <StackPanel HorizontalAlignment="Stretch">
                         <TextBlock Text="White's Dead Pieces" FontSize="16" FontWeight="Bold" Foreground="#333" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                         <WrapPanel x:Name="WhiteCapturedPanel" HorizontalAlignment="Center" Margin="0,0,0,5"/>
@@ -80,33 +80,69 @@
                 </Border>
 
                 <!-- BLACK DEAD PIECES -->
-                <Border Background="#E0E0E0" CornerRadius="0" Margin="0,0,0,0" Padding="10">
+                <Border Background="#E0E0E0" CornerRadius="0" Padding="10" Margin="0,0,0,10">
                     <StackPanel HorizontalAlignment="Stretch">
                         <TextBlock Text="Black's Dead Pieces" FontSize="16" FontWeight="Bold" Foreground="#333" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                         <WrapPanel x:Name="BlackCapturedPanel" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                     </StackPanel>
                 </Border>
 
+                <!-- MOVES SECTION -->
+                <Border Background="#E0E0E0" CornerRadius="0" Padding="10" Margin="0,0,0,10">
+                    <StackPanel HorizontalAlignment="Stretch">
+                        <!-- MOVES HEADING -->
+                        <TextBlock Text="Moves" 
+                                   FontSize="16" 
+                                   FontWeight="Bold" 
+                                   Foreground="#333" 
+                                   HorizontalAlignment="Center" 
+                                   Margin="0,0,0,10"/>
+
+                        <!-- MOVES LIST -->
+                        <Border Background="#F9F9F9" 
+                                CornerRadius="5" 
+                                Padding="8"
+                                Height="200">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="MovesPanel" 
+                                            Orientation="Vertical"/>
+                            </ScrollViewer>
+                        </Border>
+                    </StackPanel>
+                </Border>
+
             </StackPanel>
 
-            <!-- ===== UNDO / REDO / NEXT / PREV BUTTONS ===== -->
+            <!-- ===== UNDO / REDO / NEXT / PREV / RESIGN BUTTONS ===== -->
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+                <!-- UNDO -->
                 <Button x:Name="UndoButton" Width="48" Height="48" Margin="6" Background="White" BorderBrush="#333" BorderThickness="2" Click="UndoButton_Click">
-                    <Image Source="/UI/Assets/undo.png" Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/undo.jpeg" Stretch="Uniform"/>
                 </Button>
 
+                <!-- REDO -->
                 <Button x:Name="RedoButton" Width="48" Height="48" Margin="6" Background="White" BorderBrush="#333" BorderThickness="2" Click="RedoButton_Click">
-                    <Image Source="/UI/Assets/redo.png" Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/redo.jpeg" Stretch="Uniform"/>
                 </Button>
 
+                <!-- PREV -->
                 <Button x:Name="Prev" Width="48" Height="48" Margin="6" Background="White" BorderBrush="#333" BorderThickness="2" Click="Prev_Click" Visibility="Collapsed">
-                    <Image Source="/UI/Assets/prev.png" Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/prev.jpeg" Stretch="Uniform"/>
                 </Button>
 
+                <!-- NEXT -->
                 <Button x:Name="Next" Width="48" Height="48" Margin="6" Background="White" BorderBrush="#333" BorderThickness="2" Click="Next_Click" Visibility="Collapsed">
-                    <Image Source="/UI/Assets/next.png" Stretch="Uniform"/>
+                    <Image Source="/UI/Assets/next.jpeg" Stretch="Uniform"/>
                 </Button>
+
+                <!-- RESIGN -->
+                <Button x:Name="ResignButton" Width="48" Height="48" Margin="6" Background="White" BorderBrush="#333" BorderThickness="2" Click="ResignButton_Click">
+                    <Image Source="/UI/Assets/flag.jpeg" Stretch="Uniform"/>
+                </Button>
+
             </StackPanel>
+
         </Grid>
     </Grid>
 </Window>

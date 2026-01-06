@@ -158,7 +158,8 @@ namespace Chess.UI
                 gameState.MakeMove(move);
                 DrawBoard(gameState.board);
                 UpdateCapturedPiecesUI();
-            
+            AddMoveToUI(move);
+            HighlightCheck();
             if (isAI && gameState.Currentplayer == aiPlayer)
                 {
                     // AI's turn
@@ -202,7 +203,9 @@ namespace Chess.UI
                     gameState.MakeMove(aiMove);
                     DrawBoard(gameState.board);
                     UpdateCapturedPiecesUI();
-                    
+                AddMoveToUI(aiMove);
+
+
             }
             }
             // Inside Window1.xaml.cs
@@ -432,7 +435,142 @@ namespace Chess.UI
                 Console.WriteLine(ex.Message);
             }
         }
+        private void AddMoveToUI(Move move)
+        {
+            try
+            {
+                // Calculate total move pairs (each row has 2 moves: white and black)
+                int totalMovePairs = MovesPanel.Children.Count;
 
+                // Get the last row if it exists
+                StackPanel lastRow = totalMovePairs > 0 ?
+                    MovesPanel.Children[totalMovePairs - 1] as StackPanel : null;
+
+                // Check if we need to create a new row or update existing
+                if (lastRow == null)
+                {
+                    // First move - create new row
+                    CreateNewMoveRow(move, 1);
+                }
+                else
+                {
+                    // Check if the last row has a placeholder for black's move
+                    if (lastRow.Children.Count >= 3)
+                    {
+                        TextBlock blackPlaceholder = lastRow.Children[2] as TextBlock;
+                        if (blackPlaceholder != null && blackPlaceholder.Text == "...")
+                        {
+                            // Update black's move in existing row
+                            blackPlaceholder.Text = move.ToSimpleString();
+                            blackPlaceholder.Foreground = Brushes.Black;
+                        }
+                        else
+                        {
+                            // Black's move already filled, create new row for white
+                            CreateNewMoveRow(move, totalMovePairs + 1);
+                        }
+                    }
+                    else
+                    {
+                        // Row doesn't have 3 children, create new row
+                        CreateNewMoveRow(move, totalMovePairs + 1);
+                    }
+                }
+
+                // Auto-scroll to the latest move
+                if (MovesPanel.Parent is ScrollViewer scrollViewer)
+                {
+                    scrollViewer.ScrollToEnd();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding move to UI: {ex.Message}");
+            }
+        }
+
+        private void CreateNewMoveRow(Move move, int moveNumber)
+        {
+            // Create horizontal stack panel for this move pair
+            StackPanel moveRow = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                Margin = new Thickness(0, 2, 0, 2)
+            };
+
+            // Add move number
+            TextBlock numberText = new TextBlock
+            {
+                Text = $"{moveNumber}. ",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Width = 30,
+                Foreground = Brushes.DarkSlateGray
+            };
+            moveRow.Children.Add(numberText);
+
+            // Add the current move (white's move when creating new row)
+            TextBlock moveText = new TextBlock
+            {
+                Text = move.ToSimpleString(), // Shows "e2e4"
+                FontSize = 14,
+                Width = 60,
+                Foreground = Brushes.Black,
+                Margin = new Thickness(5, 0, 10, 0)
+            };
+            moveRow.Children.Add(moveText);
+
+            // Add placeholder for the opposite color's move
+            TextBlock placeholder = new TextBlock
+            {
+                Text = "...",
+                FontSize = 14,
+                Width = 60,
+                Foreground = Brushes.Gray,  
+                Margin = new Thickness(5, 0, 0, 0)
+            };
+            moveRow.Children.Add(placeholder);
+
+            MovesPanel.Children.Add(moveRow);
+        }
+        private void ResignButton_Click(object sender, RoutedEventArgs e)
+        {
+            Player winner = gameState.Currentplayer.Opponent();
+            MessageBox.Show($"{gameState.Currentplayer} resigned! {winner} wins!");
+            gameState.RaiseGameOver(winner, EndReason.Resignation); // make sure EndReason.Resignation exists
+        }
+        private void HighlightCheck()
+        {
+            // First, clear previous check highlights (but keep move highlights)
+            ClearCheckHighlights();
+
+            // Check if current player's king is in check
+            Position kingPos = gameState.board.FindKing(gameState.Currentplayer);
+
+            if (kingPos != null && gameState.board.IsInCheck(gameState.Currentplayer))
+            {
+                // Highlight the king's square in DARK RED
+                Color checkColor = Color.FromArgb(200, 139, 0, 0); // Dark red (Maroon) with high opacity
+                highlights[kingPos.Row, kingPos.Column].Fill = new SolidColorBrush(checkColor);
+            }
+        }
+
+        private void ClearCheckHighlights()
+        {
+            // Only clear squares that are not part of moveCache highlights
+            for (int r = 0; r < 8; r++)
+            {
+                for (int c = 0; c < 8; c++)
+                {
+                    Position pos = new Position(r, c);
+                    // Only clear if not a legal move highlight
+                    if (!moveCache.ContainsKey(pos))
+                    {
+                        highlights[r, c].Fill = Brushes.Transparent;
+                    }
+                }
+            }
+        }
 
 
 

@@ -103,6 +103,71 @@ namespace Chess.Core
             }
             return copy;
         }
-        
+
+        public string ToFen()
+        {
+            StringBuilder fen = new StringBuilder();
+
+            for (int r = 0; r < 8; r++)
+            {
+                int emptyCount = 0;
+
+                for (int c = 0; c < 8; c++)
+                {
+                    Piece piece = this[r, c];
+
+                    if (piece == null)
+                    {
+                        emptyCount++;
+                    }
+                    else
+                    {
+                        if (emptyCount > 0)
+                        {
+                            fen.Append(emptyCount);
+                            emptyCount = 0;
+                        }
+
+                        char p = piece.Type switch
+                        {
+                            PieceType.Pawn => 'p',
+                            PieceType.Rook => 'r',
+                            PieceType.Knight => 'n',
+                            PieceType.Bishop => 'b',
+                            PieceType.Queen => 'q',
+                            PieceType.King => 'k',
+                            _ => '?'
+                        };
+
+                        fen.Append(piece.Color == Player.White
+                            ? char.ToUpper(p)
+                            : p);
+                    }
+                }
+
+                if (emptyCount > 0)
+                    fen.Append(emptyCount);
+
+                if (r != 7)
+                    fen.Append('/');
+            }
+
+            return fen.ToString();
+        }
+        public Position FindKing(Player player)
+        {
+            for (int r = 0; r < 8; r++)
+            {
+                for (int c = 0; c < 8; c++)
+                {
+                    Piece piece = this[r, c];
+                    if (piece != null && piece.Type == PieceType.King && piece.Color == player)
+                        return new Position(r, c);
+                }
+            }
+            return null;
+        }
+
+
     }
 }

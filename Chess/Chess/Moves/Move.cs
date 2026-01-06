@@ -13,6 +13,8 @@ namespace Chess.Moves
         public abstract MoveType Type { get; }
         public abstract Position FromPos {  get; }
         public abstract Position ToPos { get; }
+        public Piece MovingPiece { get; set; }
+        public Piece CapturedPiece { get; set; }
         public abstract void Execute(Board board);
         
         public virtual bool IsLegal(Board board)
@@ -32,7 +34,37 @@ namespace Chess.Moves
 
             return legal;
 
+        }
 
+        private string PosToString(Position pos)
+        {
+            char file = (char)('a' + pos.Column); // Column 0 → 'a', 1 → 'b'
+            int rank = 8 - pos.Row;                // Row 0 → 8, Row 7 → 1
+            return $"{file}{rank}";
+        }
+
+        // Simple move string: e2e4
+        public string ToSimpleString()
+        {
+            return PosToString(FromPos) + PosToString(ToPos);
+        }
+
+        // Optional: Algebraic notation: e.g., Nf3, exd5
+        public string ToAlgebraic()
+        {
+            string pieceChar = MovingPiece.Type switch
+            {
+                PieceType.Pawn => "",
+                PieceType.Knight => "N",
+                PieceType.Bishop => "B",
+                PieceType.Rook => "R",
+                PieceType.Queen => "Q",
+                PieceType.King => "K",
+                _ => ""
+            };
+
+            string capture = CapturedPiece != null ? "x" : "";
+            return $"{pieceChar}{PosToString(ToPos)}";
         }
     }
 }

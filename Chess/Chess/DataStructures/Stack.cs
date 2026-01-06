@@ -26,8 +26,6 @@
 
         return head.Data;
     }
-
-
     public bool IsEmpty()
     {
         return head == null;

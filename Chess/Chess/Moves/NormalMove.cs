@@ -13,7 +13,13 @@ namespace Chess.Moves
         public override MoveType Type => MoveType.Normal;
         public override Position FromPos {get;}
         public override Position ToPos {get;}
-        public NormalMove(Position from,Position to)
+        public NormalMove(Position from,Position to,Board board)
+        {
+            FromPos = from;
+            ToPos = to;
+            MovingPiece = board[from];
+        }
+        public NormalMove(Position from, Position to)
         {
             FromPos = from;
             ToPos = to;
@@ -21,6 +27,7 @@ namespace Chess.Moves
         public override void Execute(Board board)
         {
             Piece piece = board[FromPos];
+            CapturedPiece = board[ToPos];
             board[ToPos] = piece;
             board[FromPos] = null;
             piece.HasMoved = true;

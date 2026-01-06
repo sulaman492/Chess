@@ -4,6 +4,8 @@ using Chess.DataStructures;
 using Chess.UI;
 using System.Text;
 
+
+
 namespace Chess.Core
 {
     public class GameState
@@ -13,7 +15,7 @@ namespace Chess.Core
         public Result Result { get; set; }
         public event Action MoveMade;
         private Dictionary<string, int> positionCount = new Dictionary<string, int>();
-
+        Graph<string> moveGraph;
 
         private Stack<MoveRecord> undoStack = new Stack<MoveRecord>();
         private Stack<MoveRecord> redoStack = new Stack<MoveRecord>();
@@ -33,6 +35,7 @@ namespace Chess.Core
             Currentplayer = turnQueue.NextTurn();
             replayCurrent = null;
             Result = null;
+            moveGraph = new Graph<string>(board.ToFen());
         }
 
         public IEnumerable<Move> LegalMoveForPieces(Position pos) 
@@ -58,7 +61,14 @@ namespace Chess.Core
                 else
                     CapturedBlackPieces.Add(CapturedPiece);
             }
+
+            // Execute the move on board
             move.Execute(board);
+
+            // ======= ADD TO GRAPH =======
+            string fen = board.ToFen();
+            moveGraph.AddMove(move, fen);
+
             UpdateRepetition();
 
             MoveRecord record = new MoveRecord(move, movingPiece, CapturedPiece, HasMovedBefore);
@@ -71,8 +81,8 @@ namespace Chess.Core
 
             Currentplayer = turnQueue.NextTurn();
             MoveMade?.Invoke();
-
         }
+
 
         public void UndoMove()
         {
@@ -92,11 +102,13 @@ namespace Chess.Core
 
             redoStack.Push(record);
             Currentplayer= Currentplayer.Opponent();
+            moveGraph.MoveBack();
         }
         public void RedoMove()
         {
             MoveRecord record = redoStack.Pop();
             if (record == null) return;
+
             if (record.CapturedPiece != null)
             {
                 if (record.CapturedPiece.Color == Player.White)
@@ -104,12 +116,16 @@ namespace Chess.Core
                 else
                     CapturedBlackPieces.Add(record.CapturedPiece);
             }
+
             record.Move.Execute(board);
             record.MovingPiece.HasMoved = true;
 
             undoStack.Push(record);
 
             Currentplayer = Currentplayer.Opponent();
+
+            // ADD THIS LINE to trigger the event
+            MoveMade?.Invoke();
         }
         public List<Move> AllLegalMovesFor(Player player)
         {

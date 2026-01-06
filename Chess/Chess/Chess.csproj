@@ -17,11 +17,12 @@
     <None Remove="UI\Assets\black-rook.png" />
     <None Remove="UI\Assets\Board.png" />
     <None Remove="UI\Assets\exit.png" />
+    <None Remove="UI\Assets\flag.jpeg" />
     <None Remove="UI\Assets\menu.png" />
     <None Remove="UI\Assets\Next.png" />
     <None Remove="UI\Assets\Prev.png" />
-    <None Remove="UI\Assets\redo.png" />
-    <None Remove="UI\Assets\undo.png" />
+    <None Remove="UI\Assets\redo.jpeg" />
+    <None Remove="UI\Assets\undo.jpeg" />
     <None Remove="UI\Assets\white-bishop.png" />
     <None Remove="UI\Assets\white-king.png" />
     <None Remove="UI\Assets\white-knight.png" />
@@ -46,15 +47,14 @@
     <Resource Include="UI\Assets\black-rook.png" />
     <Resource Include="UI\Assets\Board.png" />
     <Resource Include="UI\Assets\exit.png" />
+    <Resource Include="UI\Assets\flag.jpeg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="UI\Assets\menu.png" />
     <Resource Include="UI\Assets\Next.png" />
     <Resource Include="UI\Assets\Prev.png" />
-    <Resource Include="UI\Assets\redo.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="UI\Assets\undo.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="UI\Assets\redo.jpeg" />
+    <Resource Include="UI\Assets\undo.jpeg" />
     <Resource Include="UI\Assets\white-bishop.png" />
     <Resource Include="UI\Assets\white-king.png" />
     <Resource Include="UI\Assets\white-knight.png" />
